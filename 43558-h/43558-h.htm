@@ -1,0 +1,1579 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>THE SANDMAN'S HOUR</title>
+</head>
+<body>
+  <div class="document" id="the-sandman-s-hour">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">THE SANDMAN'S HOUR</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container coverpage">
+      <div class="vspace" style="height: 3em"></div>
+      <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-244">
+        <img class="align-center block" style="display: block; width: 100%" alt="Cover" src="images/img-cover.jpg" />
+        <div class="caption centerleft figure-caption margin">
+          <span class="italics">Cover</span>
+        </div>
+      </div>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container titlepage">
+      <p class="center pfirst"><span class="x-large">The Sandman's Hour</span></p>
+      <p class="center pnext"><span class="large">Stories</span> <em class="italics large">for</em> <span class="large">Bedtime</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">By Abbie Phillips Walker</span></p>
+      <p class="center pnext"><em class="italics medium">Illustrated by</em> <span class="medium">Rhoda. C. Chase</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">Harper &amp; Brothers, Publishers</span></p>
+      <div class="vspace" style="height: 3em"></div>
+      <div class="align-center auto-scaled figure margin" style="width: 62%" id="figure-245">
+        <img class="align-center block center" style="display: block; width: 100%" alt="Title page" src="images/img-title.jpg" />
+        <div class="caption center centerleft figure-caption margin">
+          <span class="italics">Title page</span>
+        </div>
+      </div>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container verso">
+      <p class="center pfirst"><span class="small">The Sandman's Hour</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="center pfirst"><span class="small">Copyright, 1917, by Harper &amp; Brothers<br />
+      Printed in the United States of America</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <p class="center pfirst"><span class="bold large">CONTENTS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="noindent pfirst"><a class="reference internal" href="#where-the-sparks-go">Where the Sparks Go</a> <span><br /></span><a class="reference internal" href="#the-good-sea-monster">The Good Sea Monster</a> <span><br /></span><a class="reference internal" href="#mother-turkey-and-her-chicks">Mother Turkey and Her Chicks</a> <span><br /></span><a class="reference internal" href="#the-fairies-and-the-dandelion">The Fairies and the Dandelion</a> <span><br /></span><a class="reference internal" href="#mr-possum">Mr. 'Possum</a> <span><br /></span><a class="reference internal" href="#the-rooster-that-crowed-too-soon">The Rooster That Crowed Too Soon</a> <span><br /></span><a class="reference internal" href="#tearful">Tearful</a> <span><br /></span><a class="reference internal" href="#hilda-s-mermaid">Hilda's Mermaid</a> <span><br /></span><a class="reference internal" href="#the-mirror-s-dream">The Mirror's Dream</a> <span><br /></span><a class="reference internal" href="#the-contest">The Contest</a> <span><br /></span><a class="reference internal" href="#the-pink-and-blue-eggs">The Pink and Blue Eggs</a> <span><br /></span><a class="reference internal" href="#why-the-morning-glory-sleeps">Why the Morning-Glory Sleeps</a> <span><br /></span><a class="reference internal" href="#dorothy-and-the-portrait">Dorothy and the Portrait</a> <span><br /></span><a class="reference internal" href="#mistress-pussy-s-mistake">Mistress Pussy's Mistake</a> <span><br /></span><a class="reference internal" href="#kid">Kid</a> <span><br /></span><a class="reference internal" href="#the-shoemaker-rat">The Shoemaker Rat</a> <span><br /></span><a class="reference internal" href="#the-poppies">The Poppies</a> <span><br /></span><a class="reference internal" href="#little-china-doll">Little China Doll</a> <span><br /></span><a class="reference internal" href="#the-disorderly-girl">The Disorderly Girl</a> <span><br /></span><a class="reference internal" href="#the-wise-old-gander">The Wise Old Gander</a> <span><br /></span><a class="reference internal" href="#dinah-cat-and-the-witch">Dinah Cat and the Witch</a> <span><br /></span><a class="reference internal" href="#the-star-and-the-lily">The Star and the Lily</a> <span><br /></span><a class="reference internal" href="#lazy-gray">Lazy Gray</a> <span><br /></span><a class="reference internal" href="#the-old-gray-hen">The Old Gray Hen</a> <span><br /></span><a class="reference internal" href="#the-worsted-doll">The Worsted Doll</a></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="bold x-large">THE SANDMAN'S HOUR</span></p>
+    <div class="vspace" style="height: 3em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-246">
+      <span id="headpiece-to-where-the-sparks-go"></span><span id="where-the-sparks-go"></span><img class="align-center block" style="display: block; width: 100%" alt="Headpiece to Where the Sparks Go" src="images/img-003.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Headpiece to Where the Sparks Go</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">WHERE THE SPARKS GO</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>One night when the wind was blowing and it was clear and cold out of doors, a cat and a dog, who were very good friends, sat dozing before a fire-place. The wood was snapping and crackling, making the sparks fly. Some flew up the chimney, others settled into coals in the bed of the fireplace, while others flew out on the hearth and slowly closed their eyes and went to sleep.</span></p>
+    <p class="pnext"><span>One spark ventured farther out upon the hearth and fell very near Pussy. This made her jump, which awakened the dog.</span></p>
+    <p class="pnext"><span>"That almost scorched your fur coat, Miss Pussy," said the dog.</span></p>
+    <p class="pnext"><span>"No, indeed," answered the cat. "I am far too quick to be caught by those silly sparks."</span></p>
+    <p class="pnext"><span>"Why do you call them silly?" asked the dog. "I think them very good to look at, and they help to keep us warm."</span></p>
+    <p class="pnext"><span>"Yes, that is all true," said the cat, "but those that fly up the chimney on a night like this certainly are silly, when they could be warm and comfortable inside; for my part, I cannot see why they fly up the chimney."</span></p>
+    <p class="pnext"><span>The spark that flew so near Pussy was still winking, and she blazed up a little when she heard the remark the cat made.</span></p>
+    <p class="pnext"><span>"If you knew our reason you would not call us silly," she said. "You cannot see what we do, but if you were to look up the chimney and see what happens if we are fortunate enough to get out at the top, you would not call us silly."</span></p>
+    <p class="pnext"><span>The dog and cat were very curious to know what happened, but the spark told them to look and see for themselves. Pussy was very cautious and told the dog to look first, so he stepped boldly up to the fireplace and thrust his head in. He quickly withdrew it, for his hair was singed, which made him cry and run to the other side of the room.</span></p>
+    <p class="pnext"><span>Miss Pussy smoothed her soft coat and was very glad she had been so wise; she walked over to the dog and urged him to come nearer the fire, but he realized why a burnt child dreads the fire, and remained at a safe distance.</span></p>
+    <p class="pnext"><span>Pussy walked back to the spark and continued to question it. "We cannot go into the fire," she said. "Now, pretty, bright spark, do tell us what becomes of you when you fly up the chimney. I am sure you only become soot and that cannot make you long to get to the top."</span></p>
+    <p class="pnext"><span>"Oh, you are very wrong," said the spark. "We are far from being black when we fly up the chimney, for once we reach the top, we live forever sparkling in the sky. You can see, if you look up the chimney, all of our brothers and sisters, who have been lucky and reached the top, winking at us almost every night. Sometimes the wind blows them away, I suppose, for there are nights when we cannot see the sparks shine."</span></p>
+    <p class="pnext"><span>"Who told you all that?" said the cat. "Did any of the sparks ever come back and tell you they could live forever?"</span></p>
+    <p class="pnext"><span>"Oh no!" said the spark; "but we can see them, can we not? And, of course, we all want to shine forever."</span></p>
+    <p class="pnext"><span>"I said you were silly," said the cat, "and now I know it; those are not sparks you see; they are stars in the sky."</span></p>
+    <p class="pnext"><span>"You can call them anything you like," replied the spark, "but we make the bright light you see."</span></p>
+    <p class="pnext"><span>"Well, if you take my advice," said the cat, "you will stay right in the fireplace, for once you reach the top of the chimney out of sight you go. The stars you see twinkling are far above the chimney, and you never could reach them." But the spark would not be convinced. Just then some one opened a door and the draught blew the spark back into the fireplace. In a few minutes it was flying with the others toward the top of the chimney.</span></p>
+    <p class="pnext"><span>Pussy watched the fire a minute and then looked at the dog.</span></p>
+    <p class="pnext"><span>"The spark may be right, after all," said the dog. "Let us go out and see if we can see it."</span></p>
+    <p class="pnext"><span>Pussy stretched herself and blinked. "Perhaps it is true," she replied; "anyway, I will go with you and look."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-247">
+      <span id="headpiece-to-the-good-sea-monster"></span><span id="the-good-sea-monster"></span><img class="align-center block" style="display: block; width: 100%" alt="Headpiece to The Good Sea Monster" src="images/img-007.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Headpiece to The Good Sea Monster</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE GOOD SEA MONSTER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>On an island of rocks out in the ocean lived a sea monster. His head was large, and when he opened his mouth it looked like a cave.</span></p>
+    <p class="pnext"><span>It had been said that he was so huge that he could swallow a ship, and that on stormy nights he sat on the rocks and the flashing of his eyes could be seen for miles around.</span></p>
+    <p class="pnext"><span>The sailors spoke of him with fear and trembling, but, as you can see, the sea monster had really been a friend to them, showing them the rock in the storm by flashing his eyes; but because he looked so hideous all who beheld him thought he must be a cruel monster.</span></p>
+    <p class="pnext"><span>One night there was a terrible storm, and the monster went out into the ocean to see if any ship was wrecked in the night, and, if possible, help any one that was floating about.</span></p>
+    <p class="pnext"><span>He found one little boy floating about on a plank. His name was Ko-Ko, and when he saw the monster he was afraid, but when Ko-Ko saw that the monster did not attempt to harm him he climbed on the monster's back and he took him to the rocky island. Then the monster went back into the sea and Ko-Ko wondered if he were to be left alone. But after a while the monster returned and opened his mouth very wide.</span></p>
+    <p class="pnext"><span>Ko-Ko ran when he saw the huge mouth, for he thought the monster intended to swallow him, but as he did not follow him Ko-Ko went back.</span></p>
+    <p class="pnext"><span>The monster opened his mouth again, and Ko-Ko asked, "Do you want me to go inside?" and the monster nodded his head.</span></p>
+    <p class="pnext"><span>"It must be for my own good," said Ko-Ko, "for he could easily swallow me if he wished, without waiting for me to walk in."</span></p>
+    <p class="pnext"><span>So Ko-Ko walked into the big mouth and down a dark passage, but what the monster wanted him to do he could not think. He could see very faintly now, and after a while he saw a stove, a chair, and a table. "I will take these out," said Ko-Ko, "for I am sure I can use them."</span></p>
+    <p class="pnext"><span>He took them to a cave on the island, and when he returned the monster was gone; but he soon returned, and again he opened his mouth.</span></p>
+    <p class="pnext"><span>Ko-Ko walked in this time without waiting, and he found boxes and barrels of food, which he stored away in the cave. When Ko-Ko had removed everything the monster lay down and went to sleep.</span></p>
+    <p class="pnext"><span>Ko-Ko cooked his dinner and then he awoke the monster and said, "Dinner is ready," but the monster shook his head and plunged into the ocean. He soon returned with his mouth full of fish. Then Ko-Ko knew that the monster had brought all the things from the sunken ship for him, and he began to wish that the monster could talk, for he no longer feared him.</span></p>
+    <p class="pnext"><span>"I wish you could talk," he said.</span></p>
+    <p class="pnext"><span>"I can," the monster replied. "No one ever wished it before. An old witch changed me into a monster and put me on this island, where no one could reach me, and the only way I can be restored to my original form is for some one to wish it."</span></p>
+    <p class="pnext"><span>"I wish it," said Ko-Ko.</span></p>
+    <p class="pnext"><span>"You have had your wish," said the monster, "and I can talk; but for me to become a man some one else must wish it."</span></p>
+    <p class="pnext"><span>The monster and Ko-Ko lived for a long time on the island. He took Ko-Ko for long rides on his back, and when the waves were too high and Ko-Ko was afraid the monster would open his mouth and Ko-Ko would crawl inside and be brought back safe to the island.</span></p>
+    <p class="pnext"><span>One night, after a storm, Ko-Ko saw something floating on the water, and he jumped on the monster's back and they swam out to it.</span></p>
+    <p class="pnext"><span>It proved to be a little girl, about Ko-Ko's age, who had been on one of the wrecked vessels, and they brought her to the island.</span></p>
+    <p class="pnext"><span>At first she was afraid of the monster, but when she learned that he had saved Ko-Ko as well as her and brought them all their food she became as fond of him as Ko-Ko was.</span></p>
+    <p class="pnext"><span>"I wish he were a man," she said one day, as she sat on his back with Ko-Ko, ready for a sail. Splash went both children into the water, and there in place of the monster was an old man. He caught the children in his arms and brought them to the shore.</span></p>
+    <p class="pnext"><span>"But what will we do for food, now that you are a man?" asked Ko-Ko.</span></p>
+    <p class="pnext"><span>"We shall want for nothing now," replied the old man. "I am a sea-god and can do many things, now that I have my own form again. We will change this island into a beautiful garden, and when the little girl and you are grown up and married you shall have a castle, and all the sea-gods and nymphs will care for you. You will never want for anything again.</span></p>
+    <p class="pnext"><span>"I will take you out on the ocean on the backs of my dolphins."</span></p>
+    <p class="pnext"><span>Ko-Ko and the little girl lived on the enchanted island, and all the things that the old sea-god promised came true.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 74%" id="figure-248">
+      <span id="headpiece-to-mother-turkey-and-her-chicks"></span><span id="mother-turkey-and-her-chicks"></span><img class="align-center block" style="display: block; width: 100%" alt="Headpiece to Mother Turkey and Her Chicks" src="images/img-011.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Headpiece to Mother Turkey and Her Chicks</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">MOTHER TURKEY AND HER CHICKS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Mother Turkey believed in the old adage taught to her by her grandmother, "The early bird catches the worm," and every night when the sun set she took her little chicks to the highest branch they could reach in an old apple-tree and sang them to sleep with this lullaby:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Close your eyes, my little turkey chicks;</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Hide your heads, don't peep.</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Mother knows the bogy fox's tricks,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>And she'll watch while you sleep."</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>Mother Turkey had told them about the bogy fox that lived in a hole on the other side of the hill, and it did not need more than the mention of that name to make them obey.</span></p>
+    <p class="pnext"><span>"I do wish we could get just a look at him," said one chick, as his mother came to the end of the verse. "I should not know him if I met him."</span></p>
+    <p class="pnext"><span>"Oh yes, you would," replied his mother. "He has a very long tail, and a sharp nose, and his teeth! Oh, dear me!" she exclaimed, as she flapped her wings at the thought of them.</span></p>
+    <p class="pnext"><span>"Will you wake us if he comes to-night?" asked another chick.</span></p>
+    <p class="pnext"><span>"I shall not need to do that," replied Mother Turkey; "you will hear us talking. He is a very sly fellow, and always very polite and says nice things. But you cover your heads; it is getting late," and she began to sing:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Close your eyes, my little turkey chicks;</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Hide your heads, don't peep.</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Mother knows the bogy fox's tricks,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>And she'll watch while you sleep."</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>By the time Mother Turkey reached the end of the verse this time all the chicks were fast asleep.</span></p>
+    <p class="pnext"><span>Mother Turkey stretched out her wings once or twice and turned her head in all directions, and then she settled herself for a nap.</span></p>
+    <p class="pnext"><span>The moon was shining brightly when she awoke, and she saw not far off what looked like a large black dog walking cautiously toward the tree. Mother Turkey took another look and saw the bushy tail, and she perched herself more firmly on the limb and looked to see if her children were safe on there, too, for she knew that the bogy fox had come to take one of her chicks back to his hole if he could.</span></p>
+    <p class="pnext"><span>"Good evening, Mr. Fox," she said, as the fox came near enough to hear her. "I was sure that I knew your splendid figure; you certainly make a most remarkable picture in the moonlight."</span></p>
+    <p class="pnext"><span>Mr. Fox was somewhat taken aback at this compliment paid him in such a pleasant manner, for usually he was the one to make remarks and the turkeys listened, not daring to move or speak.</span></p>
+    <p class="pnext"><span>He recovered from his surprise by the time he was under the tree, and said: "You are most flattering, Mistress Turkey, and I can only return the compliment by telling you that you are a picture yourself in the moonlight, sitting so stately on that limb, but if you would enjoy to the full extent this beautiful evening you must come from the tree and take a walk over the hill."</span></p>
+    <p class="pnext"><span>"No doubt you are right," replied Mrs. Turkey, "but I could not think of leaving my children alone."</span></p>
+    <p class="pnext"><span>"I should be very glad to take care of the little dears while you are gone," said Mr. Fox, "and if you will have them come down beside me I will tell them a story which I am sure will keep them interested until you return."</span></p>
+    <p class="pnext"><span>By this time the turkey chicks were awake and listening to what the fox was saying. He seemed so nice and polite that they quite forgot to be afraid, and when he spoke of telling them a story one of them said: "Oh, please do go, mother, and let him tell us a story. We'll be very good if you will."</span></p>
+    <p class="pnext"><span>"You see, my dear madam," said the fox, "the little dears are quite willing to stay with me. Do go and enjoy the moonlight."</span></p>
+    <p class="pnext"><span>Mother Turkey looked at her children in a way that plainly said to them, "Be quiet," and then she said to Mr. Fox: "I appreciate your kind offer, and were my children well should be very glad to leave them with you, but they have been sick, and are so lean that I have to be very careful that they sleep and eat well, or they will not be fat by next Thanksgiving, and that would be a disgrace, you know."</span></p>
+    <p class="pnext"><span>When the fox heard this he was not so anxious to have the chicks come down, so he said, "I know just how anxious you must feel, Mistress Turkey, and if you will come down where I can talk with you without being heard I will tell you the very thing to give them to make them fat."</span></p>
+    <p class="pnext"><span>"If he cannot get the chicks he will take me," thought Mrs. Turkey, "but I am too old a bird to be caught even by this sly fellow."</span></p>
+    <p class="pnext"><span>Mrs. Turkey did not reply to this last remark. She was thinking of a trap she saw her master set the day before. "I wish you would walk around a little so my children can see what a beautiful bushy tail you have," she said. "They have never seen so handsome a fellow as you are."</span></p>
+    <p class="pnext"><span>Mr. Fox was very proud of his tail, so he walked out from the shade of the tree and strutted about.</span></p>
+    <p class="pnext"><span>"Tell him how handsome he is," whispered Mother Turkey to her chicks.</span></p>
+    <p class="pnext"><span>"Oh, isn't he handsome!" said one, and another said, "I wish we had such bushy tails, instead of these straight feathers," while Mrs. Turkey said, "You are quite the handsomest creature I have ever seen, and I have seen many in my time."</span></p>
+    <p class="pnext"><span>By this time the fox was so pleased with their admiration that he was ready to do anything to display his charms, so when Mrs. Turkey said, "I wish you would run and show them how you can run and jump," he asked what he could jump on to show his nimbleness.</span></p>
+    <p class="pnext"><span>"The top of that hogshead would be a good place," said Mrs. Turkey, knowing well that the cask had no head and that it was nearly full of water.</span></p>
+    <p class="pnext"><span>Away ran Mr. Fox, and splash he went into the hogshead. He tried to get out, but it was no use; the cask was too high, and then the farmer, hearing the noise, came out and soon put an end to Mr. Fox.</span></p>
+    <p class="pnext"><span>The little turkeys sat wide-awake and trembling beside their mother, but when the farmer went into the house she began to sing:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Close your eyes, my little turkey chicks;</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>Hide your heads, don't peep.</span>
+            </div>
+          </div>
+          <div class="line">
+            <span>Mother knows the bogy fox's tricks,</span>
+          </div>
+          <div class="inner line-block">
+            <div class="line">
+              <span>And she'll watch while you sleep."</span>
+            </div>
+            <div class="line">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>And in a few minutes all was quiet again in the yard.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-249">
+      <span id="headpiece-to-the-fairies-and-the-dandelion"></span><span id="the-fairies-and-the-dandelion"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Fairies and the Dandelion" src="images/img-016.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Fairies and the Dandelion</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE FAIRIES AND THE DANDELION</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The Fairies say that a long time ago the dandelion did not have a yellow blossom or the fluffy white cap it wears after the yellow has been taken off.</span></p>
+    <p class="pnext"><span>They tell the story that one night, a long time ago, while they were holding one of their revels in a field, sounds of weeping and moaning were heard.</span></p>
+    <p class="pnext"><span>The Fairy Queen stopped the dance and listened. "It comes from the ground," she said, "down among the grasses. Hurry, all of you; find out who is in trouble and come back and tell me."</span></p>
+    <p class="pnext"><span>Away went the Fairies into the fields and gardens and lanes. Darting in and out among the blades of grass, they found queer-looking weeds with leaves resembling a lion's tooth. They were crying and chanting a sing-song tune:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Here we grow so bright and green,</span>
+          </div>
+          <div class="line">
+            <span>The color of grass, and can't be seen.</span>
+          </div>
+          <div class="line">
+            <span>O bitter woe, but we'll not stop</span>
+          </div>
+          <div class="line">
+            <span>Till the Fairies give us a yellow top."</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>Back flew the Fairies to their Queen and told her what they had heard.</span></p>
+    <p class="pnext"><span>"If only they had asked for some other color!" she said. "There are so many yellow blossoms now. The buttercup, the goldenglow, and the goldenrod will all be jealous if another yellow flower enters their bright circle. Go back and ask them if they will be quiet if we give them a white top."</span></p>
+    <p class="pnext"><span>The Fairies danced away to the crying dandelions with the Queen's message.</span></p>
+    <p class="pnext"><span>"The Queen will give you a white top," they said.</span></p>
+    <p class="pnext"><span>"No, no!" they cried. "Yellow is the color we should wear with our green leaves. It is the color of the sun and we wish to be as near like him as we can," and they all began to cry:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"O bitter woe, we will not stop</span>
+          </div>
+          <div class="line">
+            <span>Till the Fairies give us a yellow top."</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>They made such a noise that the Fairies put their fingers in their ears as they flew back to the Queen.</span></p>
+    <p class="pnext"><span>The grass-blades stood up higher and looked about. "Do quiet those noisy weeds," they said to the Queen; "give them the yellow top for which they are crying, and let us go to sleep. We have been kept awake since sunset and it will soon be sunrise."</span></p>
+    <p class="pnext"><span>"What shall we do?" said the Queen. "I do not know where to get the yellow they want."</span></p>
+    <p class="pnext"><span>"If we could get some sunbeams," said one Fairy, "we could have just the color they are crying for. Of course, we cannot venture into such a strong light, but the Elves might gather them for us."</span></p>
+    <p class="pnext"><span>So they went to the Elves and asked them to gather the sunbeams for the next day, and bring them to the valley the next night.</span></p>
+    <p class="pnext"><span>The Elves were very willing to help them, but the sun shone very little the next day, and they were able to gather only a few basketfuls of the bright golden color.</span></p>
+    <p class="pnext"><span>When the Queen saw the quantity she was in despair. "This will never go around," she said, "and those that are left without a yellow top will cry louder than ever."</span></p>
+    <p class="pnext"><span>"Why not divide it among them?" said one Fairy. "It will last for a little while and we can give them our fluffy white caps when that is gone. We shall take them off soon and the dandelions can wear them the rest of the season."</span></p>
+    <p class="pnext"><span>The face of the Queen brightened. "The very thing," she said, "if only the noisy little weeds will agree. Go to them and say they can wear yellow of the very shade they most desire half the season if they are willing to accept our fluffy white caps for the other half."</span></p>
+    <p class="pnext"><span>The Fairies hurried to the dandelions and told them what the Queen had said. The dandelions stopped crying and said they would be satisfied, and the Queen rode through the meadows, fields, gardens, and lanes, dropping gold upon each weed as she passed along.</span></p>
+    <p class="pnext"><span>In the morning when the sun beheld his own bright color looking up at him he was so surprised that he almost stood still.</span></p>
+    <p class="pnext"><span>The Fairies kept their promise, and when it was time to take off their fluffy white caps they went among the dandelions and hung a cap on each stem.</span></p>
+    <p class="pnext"><span>The dandelions did not cry again, and the grass sleeps on from sunset to sunrise, undisturbed.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-250">
+      <span id="headpiece-to-mr-possum"></span><span id="mr-possum"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Mr. 'Possum" src="images/img-020.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Mr. 'Possum</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">MR. 'POSSUM</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Mr. 'Possum lived in a tree in the woods where Mr. Bear lived, and one morning just before spring Mr. 'Possum awoke very hungry.</span></p>
+    <p class="pnext"><span>He ran around to Mr. Squirrel's house and tried to get an invitation to breakfast, but Mr. Squirrel had only enough for himself. He knew that Mr. 'Possum always lived on his neighbors when he could, so he said: "Of course you have been to breakfast long ago, Mr. 'Possum, you are such a smart fellow, so I will not offer you any."</span></p>
+    <p class="pnext"><span>Mr. 'Possum of course said he had, and that he only dropped in to make a call; he was on his way to Mr. Rabbit's house.</span></p>
+    <p class="pnext"><span>But he met with no better success at Mr. Rabbit's, for he only put his nose out of the door, and when he saw who was there, said: "I am as busy as I can be getting ready for my spring planting. Will you come in and help sort seeds?"</span></p>
+    <p class="pnext"><span>Mr. Rabbit knew the easiest way to be rid of Mr. 'Possum was to ask him to work.</span></p>
+    <p class="pnext"><span>"I would gladly help you," replied Mr. 'Possum, "but I am in a great hurry this morning. I have some important business with Mr. Bear and I only stopped to say how-do-you-do."</span></p>
+    <p class="pnext"><span>"Mr. Bear, I am afraid, will not be receiving to-day," said Mr. Rabbit. "It is rather early for him to be up, isn't it?"</span></p>
+    <p class="pnext"><span>"I thought as the sun was nice and warm he might venture out, and I thought it would please him to have me there to welcome him," said Mr. 'Possum. "Besides that, I wish to see him on business."</span></p>
+    <p class="pnext"><span>Now, Mr. 'Possum knew well enough that Mr. Bear would not be up, and he wanted to find him sleeping, and soundly, too.</span></p>
+    <p class="pnext"><span>He went to the door and knocked softly, then he waited, and as he did not hear any moving inside he went to a window and looked in. There was Mr. Bear's chair and pipe just as he left them when he went to bed. He looked in the bedroom window and he could see in the bed a big heap of bedclothes, and just the tiniest tip of Mr. Bear's nose.</span></p>
+    <p class="pnext"><span>Mr. 'Possum listened, and he trembled a little, for he could hear Mr. Bear breathing very loud, and it sounded anything but pleasant.</span></p>
+    <p class="pnext"><span>"Oh, he is sound asleep for another week!" said Mr. 'Possum. "What is the use of being afraid?" He walked around the house until he came to the pantry window; then he stopped and raised the sash.</span></p>
+    <p class="pnext"><span>He put in one foot and sat on the sill and listened. All was still, so he slid off to the floor. Mr. 'Possum looked around Mr. Bear's well-filled pantry. He did not know where to begin, he was so hungry.</span></p>
+    <p class="pnext"><span>He became so interested and was so greedy that he forgot all about that he was in Mr. Bear's pantry, and he stayed on and on and ate and ate.</span></p>
+    <p class="pnext"><span>Then he fell asleep, and the first thing he knew a pair of shining eyes were looking in the window and a big head with a red mouth full of long white teeth was poked into the pantry.</span></p>
+    <p class="pnext"><span>Mr. 'Possum thought his time had come, so he just closed his eyes and pretended he was dead, but he peeked a little so as to see what happened.</span></p>
+    <p class="pnext"><span>The big head was followed by a body, and when it was on the sill Mr. 'Possum saw it was Mr. Fox, and the next thing he knew Mr. Fox came off the sill with a bang and hit a pan of beans and then knocked over a jar of preserves.</span></p>
+    <p class="pnext"><span>The noise was enough to awaken all the bears for miles around, and Mr. 'Possum was frightened nearly to death, for he heard Mr. Bear growling in the next room.</span></p>
+    <p class="pnext"><span>While Mr. Fox was on the floor and trying to get up on his feet Mr. 'Possum jumped up and was out of the window like a flash. Mr. Fox saw something, but he did not know what, and before he could make his escape the door of the pantry opened and there stood Mr. Bear with a candle in his hand, looking in.</span></p>
+    <p class="pnext"><span>"Oh, oh!" he growled, "so you are trying to rob me while I'm taking my sleep," and he sprang at Mr. Fox.</span></p>
+    <p class="pnext"><span>"Wait, wait," said Mr. Fox. "Let me explain, my dear Mr. Bear. You are mistaken; I was trying to protect your home. I saw your window open and knew you were asleep, and when I got in the window the thief attacked me and nearly killed me and now you are blaming me for it. You are most ungrateful. I shall know another time what to do."</span></p>
+    <p class="pnext"><span>Mr. Bear looked at him. His mouth did not show any signs of food, and Mr. Fox opened his mouth and told him to look.</span></p>
+    <p class="pnext"><span>"I wonder who it could have been?" he said, when he was satisfied that Mr. Fox was not the thief. "It may have been that 'Possum fellow. I'll go over to his house in the morning."</span></p>
+    <p class="pnext"><span>The next morning Mr. Bear called on Mr. 'Possum. He found him sleeping soundly, and when he at last opened the door he was rubbing his eyes as though he was not half awake.</span></p>
+    <p class="pnext"><span>"Why, how do you do?" he said, when he saw Mr. Bear. "I did not suppose you were up yet."</span></p>
+    <p class="pnext"><span>"You didn't?" asked Mr. Bear, and then he stared at Mr. 'Possum's coat. "What is the matter with your coat?" he asked. "You have white hairs sticking out all over you, and the rest of your coat is almost white, too."</span></p>
+    <p class="pnext"><span>Now Mr. 'Possum had a black coat before, and he ran to the mirror and looked at himself. It was true; he was almost white. He knew what had happened. He was so frightened when he was caught in Mr. Bear's pantry by Mr. Fox, and heard Mr. Bear growl, that he had turned nearly white with fright.</span></p>
+    <p class="pnext"><span>"I have been terribly ill," he told Mr. Bear, going back to the door. "And I have been here all alone this winter. It was a terrible sickness; I guess that is what has caused it."</span></p>
+    <p class="pnext"><span>Mr. Bear went away, shaking his head. "That fellow is crafty," he said. "I feel sure he was the thief, and yet he certainly does look sick."</span></p>
+    <p class="pnext"><span>After that all the opossums were of dull white color, with long, white hairs scattered here and there over their fur. They were never able to outgrow the mark the thieving Mr. 'Possum left upon his race.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 70%" id="figure-251">
+      <span id="headpiece-to-the-rooster-that-crowed-too-soon"></span><span id="the-rooster-that-crowed-too-soon"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Rooster that Crowed too Soon" src="images/img-025.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Rooster that Crowed too Soon</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE ROOSTER THAT CROWED TOO SOON</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Red Rooster felt it was time he showed the new drake that had come to live in the barnyard that he was a very brave rooster, as well as the ruler of the barnyard.</span></p>
+    <p class="pnext"><span>So the next time he saw the drake he said: "I suppose you have been in many battles, and no doubt the home you have just come from will miss your protection as well as your company.'</span></p>
+    <p class="pnext"><span>"No," replied the drake; "I never was in a battle. I do not quarrel with any one. I believe in living in peace with all around me."</span></p>
+    <p class="pnext"><span>"Oh, well, that is all very well for you, perhaps," said the rooster; "but for me, it is a different matter. I have to protect all the hens and chickens and I also protect myself. I can whip any rooster around here, and no one dares come into my yard."</span></p>
+    <p class="pnext"><span>The drake did not reply, for just then a strange rooster came into the yard, and Red Rooster ran at him with sweeping wings.</span></p>
+    <p class="pnext"><span>He pecked at the intruder and spurred him until he was glad to run away.</span></p>
+    <p class="pnext"><span>"There, what did I tell you?" said Red Rooster, coming back to the drake. "I am the greatest fighter around this part of the country. I am not afraid of anything."</span></p>
+    <p class="pnext"><span>"Oh, don't talk so much about it," said the dog from his house near-by. "I think there are a few things even you are afraid of, Mr. Rooster. I guess you would run from a fox."</span></p>
+    <p class="pnext"><span>"I am not afraid of a fox," said Red Rooster. "I can scare him by crowing loudly. Master knows when I make a great noise it is time for him to find the cause. Oh, I am very brave and can take care of myself."</span></p>
+    <p class="pnext"><span>Red Rooster felt so brave that he thought the highest place he could get on the wall would be a good place to talk about his bravery, so he flew up on the wall by the gate, and then to the top of the hen-house.</span></p>
+    <p class="pnext"><span>Madam Pig was in her pen on the other side. "Madam Pig," he said, "did you see me whip that impudent rooster that came through our yard?"</span></p>
+    <p class="pnext"><span>Madam Pig grunted that she did not, as she could not see over the wall.</span></p>
+    <p class="pnext"><span>"You surely missed a great sight," said the rooster, stretching his neck and strutting along the roof. "I am a brave fellow. I never allow any one to come around here that does not belong here. I have just been telling the new drake about my prowess and bravery.</span></p>
+    <p class="pnext"><span>"Mr. Drake," he called, as the new drake and his family waddled past the hen-house, "if you need protection at any time do not hesitate to call upon me."</span></p>
+    <p class="pnext"><span>A robin perched upon the roof not far from him, and Red Rooster flew at him. "Go away," he said. "I am very fierce and brave, and if you were as large as a cow I should attack you just the same. I am not afraid of anything."</span></p>
+    <p class="pnext"><span>Red Rooster strutted up and down, crowing and thinking how brave he was, and so intent was he upon his greatness that he did not heed the warning cries that came from the fowls in the yard below him.</span></p>
+    <p class="pnext"><span>In a moment more a big hawk swooped down and held Red Rooster in his claws. He started to fly just as the shot from a gun sounded, and Red Rooster fell to the ground.</span></p>
+    <p class="pnext"><span>He jumped up and shook himself, and looked in time to see his master pick up the dead hawk.</span></p>
+    <p class="pnext"><span>"I guess that hawk won't show himself around here again," he said. "That was a very hard fight, but I won, even if I did get a tumble."</span></p>
+    <p class="pnext"><span>"Well, if you are not a conceited fellow!" laughed the dog; "but I was not the only one that saw the hawk start off with you, and we all know that if master had not shot it you would not be here to crow to-morrow morning."</span></p>
+    <p class="pnext"><span>"No," piped the robin from a tree; "you were telling me how brave you were, and the hawk was not half as large as a cow. You were not very brave when he came upon you. You did not do a thing. Oh, dear! it was so funny to hear you crowing about your bravery and then to see you caught up so soon by a hawk that is only a little larger than you."</span></p>
+    <p class="pnext"><span>The drake and all his family were listening, and Madam Pig had put her head over the wall to listen. Poor Red Rooster felt that it was no time to crow about his bravery, so he walked away with all the dignity he could muster.</span></p>
+    <p class="pnext"><span>"He crowed too soon," said the drake.</span></p>
+    <p class="pnext"><span>"He crowed too much," said the dog.</span></p>
+    <p class="pnext"><span>"He crowed too loud," said the robin, "or he would have heard the warning cries from the hens and chickens."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-252">
+      <span id="headpiece-to-tearful"></span><span id="tearful"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Tearful" src="images/img-029.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Tearful</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">TEARFUL</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Once upon a time there was a little girl named Tearful, because she cried so often.</span></p>
+    <p class="pnext"><span>If she could not have her own way, she cried; if she could not have everything for which she wished, she cried.</span></p>
+    <p class="pnext"><span>Her mother told her one day that she would melt away in tears if she cried so often. "You are like the boy who cried for the moon," she told her, "and if it had been given to him it would not have made him happy, for what possible use could the moon be to any one out of its proper place? And that is the way with you; half the things for which you cry would be of no use to you if you got them."</span></p>
+    <p class="pnext"><span>Tearful did not take warning or heed her mother's words of wisdom, and kept on crying just the same.</span></p>
+    <p class="pnext"><span>One morning she was crying as she walked along to school, because she wanted to stay at home, when she noticed a frog hopping along beside her.</span></p>
+    <p class="pnext"><span>"Why are you following me?" she asked, looking at him through her tears.</span></p>
+    <p class="pnext"><span>"Because you will soon form a pond around you with your tears," replied the frog, "and I have always wanted a pond all to myself."</span></p>
+    <p class="pnext"><span>"I shall not make any pond for you," said Tearful, "and I do not want you following me, either."</span></p>
+    <p class="pnext"><span>The frog continued to hop along beside her, and Tearful stopped crying and began to run, but the frog hopped faster, and she could not get away from him, so she began to cry again.</span></p>
+    <p class="pnext"><span>"Go away, you horrid green frog!" she said.</span></p>
+    <p class="pnext"><span>At last she was so tired she sat on a stone by the roadside, crying all the time.</span></p>
+    <p class="pnext"><span>"Now," replied the frog, "I shall soon have my pond."</span></p>
+    <p class="pnext"><span>Tearful cried harder than ever, then; she could not see, her tears fell so fast, and by and by she heard a splashing sound. She opened her eyes and saw water all around her.</span></p>
+    <p class="pnext"><span>She was on a small island in the middle of the pond; the frog hopped out of the pond, making a terrible grimace as he sat down beside her.</span></p>
+    <p class="pnext"><span>"I hope you are satisfied," said Tearful. "You have your pond; why don't you stay in it?"</span></p>
+    <p class="pnext"><span>"Alas!" replied the frog, "I have wished for something which I cannot use now that I have it. Your tears are salt and my pond which I have all by myself is so salt that I cannot enjoy it. If only your tears had been fresh I should have been a most fortunate fellow."</span></p>
+    <p class="pnext"><span>"You needn't stay if you do not like it," said Tearful, "and you needn't find fault with my tears, either," she said, beginning to cry again.</span></p>
+    <p class="pnext"><span>"Stop! stop!" cried the frog, hopping about excitedly; "you will have a flood if you keep on crying."</span></p>
+    <p class="pnext"><span>Tearful saw the water rising around her, so she stopped a minute. "What shall I do?" she asked. "I cannot swim, and I will die if I have to stay here," and then she began to cry again.</span></p>
+    <p class="pnext"><span>The frog hopped up and down in front of her, waving his front legs and telling her to hush. "If you would only stop crying," he said, "I might be able to help you, but I cannot do a thing if you cover me with your salt tears."</span></p>
+    <p class="pnext"><span>Tearful listened, and promised she would not cry if he would get her away from the island.</span></p>
+    <p class="pnext"><span>"There is only one way that I know of," said the frog; "you must smile; that will dry the pond and we can escape."</span></p>
+    <p class="pnext"><span>"But I do not feel like smiling," said Tearful, and her eyes filled with tears again.</span></p>
+    <p class="pnext"><span>"Look out!" said the frog; "you will surely be drowned in your own tears if you cry again."</span></p>
+    <p class="pnext"><span>Tearful began to laugh. "That would be queer, wouldn't it, to be drowned in my own tears?" she said.</span></p>
+    <p class="pnext"><span>"That is right, keep on smiling," said the frog; "the pond is smaller already." And he stood up on his hind legs and began to dance for joy.</span></p>
+    <p class="pnext"><span>Tearful laughed again. "Oh, you are so funny!" she said. "I wish I had your picture. I never saw a frog dance before."</span></p>
+    <p class="pnext"><span>"You have a slate under your arm," said the frog. "Why don't you draw a picture of me?" The frog picked up a stick and stuck it in the ground, and then he leaned on it with one arm, or front leg, and, crossing his feet, he stood very still.</span></p>
+    <p class="pnext"><span>Tearful drew him in that position, and then he kicked up his legs as if he were dancing, and she tried to draw him that way, but it was not a very good likeness.</span></p>
+    <p class="pnext"><span>"Do you like that?" she asked the frog when she held the slate for him to see. He looked so surprised that Tearful laughed again. "You did not think you were handsome, did you?" she asked.</span></p>
+    <p class="pnext"><span>"I had never thought I looked as bad as those pictures," replied the frog. "Let me try drawing your picture," he said.</span></p>
+    <p class="pnext"><span>"Now look pleasant," he said, as he seated himself in front of Tearful, "and do smile."</span></p>
+    <p class="pnext"><span>Tearful did as he requested, and in a few minutes he handed her the slate. "Where is my nose?" asked Tearful, laughing.</span></p>
+    <p class="pnext"><span>"Oh, I forgot the nose!" said the frog. "But don't you think your eyes are nice and large, and your mouth, too?"</span></p>
+    <p class="pnext"><span>"They are certainly big in this picture," said Tearful. "I hope I do not look just like that."</span></p>
+    <p class="pnext"><span>"I do not think either of us are artists," replied the frog.</span></p>
+    <p class="pnext"><span>Tearful looked around her. "Why, where is the pond?" she asked. "It is gone."</span></p>
+    <p class="pnext"><span>"I thought it would dry up if you would only smile," said the frog; "and I think both of us have learned a lesson. I shall never again wish for a pond of my own. I should be lonely without my companions, and then, it might be salt, just as this one was. And you surely will never cry over little things again, for you see what might happen to you, and then you look so much prettier smiling."</span></p>
+    <p class="pnext"><span>"Perhaps I do," said Tearful, "but your pictures of me make me doubt it. However, I feel much happier smiling, and I do not want to be on an island again, even with such a pleasant companion as you were."</span></p>
+    <p class="pnext"><span>"Look out for the tears, then," said the frog as he hopped away.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-253">
+      <span id="headpiece-to-hilda-s-mermaid"></span><span id="hilda-s-mermaid"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Hilda's Mermaid" src="images/img-034.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Hilda's Mermaid</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">HILDA'S MERMAID</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Little Hilda's father was a sailor and went away on long voyages. Hilda lived in a little cottage on the shore and used to spin and knit while her father was away, for her mother was dead and she had to be the housekeeper. Some days she would go out in her boat and fish, for Hilda was fond of the water. She was born and had always lived on the shore. When the water was very calm Hilda would look down into the blue depths and try to see a mermaid. She was very anxious to see one, she had heard her father tell such wonderful stories about them--how they sang, and combed their beautiful long hair.</span></p>
+    <p class="pnext"><span>One night when the wind was blowing and the rain was beating hard upon her window Hilda could hear the horn warning the sailors off the rocks. Hilda lighted her father's big lantern and ran down to the shore and hung it on the mast of a wreck which lay there, so the sailors would not run their ships upon it. Little Hilda was not afraid, for she had seen many such storms. When she returned to her cottage she found the door was unlatched, but thought the wind had blown it open. When she entered she found a little girl with beautiful hair sitting on the floor. She was a little frightened at first, for the girl wore a green dress and it was wound around her body in the strangest manner.</span></p>
+    <p class="pnext"><span>"I saw your light," said the child, "and came in. The wind blew me far up on shore. I should not have come up on a night like this, but a big wave looked so tempting I thought I would jump on it and have a nice ride, but it was nearer the shore than I thought it, and it landed me right near your door."</span></p>
+    <p class="pnext"><span>"Oh, my!" How Hilda's heart beat, for she knew this child must be a mermaid. Then she saw what she had thought a green dress was really her body and tail curled up on the floor, and it was beautiful as the lamp fell upon it and made it glisten.</span></p>
+    <p class="pnext"><span>"Will you have some of my supper?" asked Hilda, for she wanted to be hospitable, although she had not the least idea what mermaids ate.</span></p>
+    <p class="pnext"><span>"Thank you," answered the mermaid. "I am not very hungry, but if you could give me a seaweed sandwich I should like it."</span></p>
+    <p class="pnext"><span>Poor Hilda did not know what to do, but she went to the closet and brought out some bread, which she spread with nice fresh butter, and filled a glass with milk. She told her she was sorry, but she did not have any seaweed sandwiches, but she hoped she would like what she had prepared. The little mermaid ate it and Hilda was pleased.</span></p>
+    <p class="pnext"><span>"Do you live here all the time?" she asked Hilda. "I should think you would be very warm and want to be in the water part of the time."</span></p>
+    <p class="pnext"><span>Hilda told her she could not live in the water as she did, because her body was not like hers.</span></p>
+    <p class="pnext"><span>"Oh, I am so sorry!" replied the mermaid. "I hoped you would visit me some time; we have such good times, my sisters and I, under the sea."</span></p>
+    <p class="pnext"><span>"Tell me about your home," said Hilda.</span></p>
+    <p class="pnext"><span>"Come and sit beside me and I will," she replied.</span></p>
+    <p class="pnext"><span>Hilda sat upon the floor by her side. The mermaid felt of Hilda's clothes and thought it must be a bother to have so many clothes.</span></p>
+    <p class="pnext"><span>"How can you swim?" she asked.</span></p>
+    <p class="pnext"><span>Hilda told her she put on a bathing-suit, but the mermaid thought that a nuisance.</span></p>
+    <p class="pnext"><span>"I will tell you about our house first," she began. "Our father, Neptune, lives in a beautiful castle at the bottom of the sea. It is built of mother-of-pearl. All around the castle grow beautiful green things, and it has fine white sand around it also. All my sisters live there, and we are always glad to get home after we have been at the top of the ocean, it is so nice and cool in our home. The wind never blows there and the rain does not reach us."</span></p>
+    <p class="pnext"><span>"You do not mind being wet by the rain, do you?" asked Hilda.</span></p>
+    <p class="pnext"><span>"Oh no!" said the mermaid, "but the rain hurts us. It falls in little sharp points and feels like pebbles."</span></p>
+    <p class="pnext"><span>"How do you know how pebbles feel?" Hilda asked.</span></p>
+    <p class="pnext"><span>"Oh, sometimes the nereids come and bother us; they throw pebbles and stir up the water so we cannot see."</span></p>
+    <p class="pnext"><span>"Who are the nereids?" asked Hilda.</span></p>
+    <p class="pnext"><span>"They are the sea-nymphs; but we make the dogfish drive them away. We are sirens, and they are very jealous of us because we are more beautiful than they," said the mermaid.</span></p>
+    <p class="pnext"><span>Hilda thought she was rather conceited, but the little mermaid seemed to be quite unconscious she had conveyed that impression.</span></p>
+    <p class="pnext"><span>"How do you find your way home after you have been at the top of the ocean?" asked Hilda.</span></p>
+    <p class="pnext"><span>"Oh, when Father Neptune counts us and finds any missing he sends a whale to spout; sometimes he sends more than one, and we know where to dive when we see that."</span></p>
+    <p class="pnext"><span>"What do you eat besides seaweed sandwiches?" asked Hilda.</span></p>
+    <p class="pnext"><span>"Fish eggs, and very little fish," answered the mermaid. "When we have a party we have cake."</span></p>
+    <p class="pnext"><span>Hilda opened her eyes. "Where do you get cake?" she asked.</span></p>
+    <p class="pnext"><span>"We make it. We grind coral into flour and mix it with fish eggs; then we put it in a shell and send a mermaid to the top of the ocean with it and she holds it in the sun until it bakes. We go to the Gulf Stream and gather grapes and we have sea-foam and lemonade to drink."</span></p>
+    <p class="pnext"><span>"Lemonade?" said Hilda. "Where do you get your lemons?"</span></p>
+    <p class="pnext"><span>"Why, the sea-lemon!" replied the mermaid; "that is a small mussel-fish the color of a lemon."</span></p>
+    <p class="pnext"><span>"What do you do at your parties--you cannot dance?" said Hilda.</span></p>
+    <p class="pnext"><span>"We swim to the music, circle around and dive and glide."</span></p>
+    <p class="pnext"><span>"But the music--where do you get musicians?" Hilda continued.</span></p>
+    <p class="pnext"><span>"We have plenty of music," replied the mermaid. "The sea-elephant trumpets for us; then there is the pipefish, the swordfish runs the scales of the sea-adder with his sword, the sea-shells blob, and altogether we have splendid music. But it is late, and we must not talk any more."</span></p>
+    <p class="pnext"><span>So the little mermaid curled herself up and soon they were asleep.</span></p>
+    <p class="pnext"><span>The sun shining in the window awakened Hilda next morning and she looked about her. The mermaid was not there, but Hilda was sure it had not been a dream, for she found pieces of seaweed on the floor, and every time she goes out in her boat she looks for her friend, and when the whales spout she knows they are telling the mermaids to come home.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-254">
+      <span id="headpiece-to-the-mirror-s-dream"></span><span id="the-mirror-s-dream"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Mirror's Dream" src="images/img-040.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Mirror's Dream</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE MIRROR'S DREAM</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"The very idea of putting me in the attic!" said the little old-fashioned table, as it spread out both leaves in a gesture of despair. "I have stood in the parlor down-stairs for fifty years, and now I am consigned to the rubbish-room," and it dropped its leaves at its side with a sigh.</span></p>
+    <p class="pnext"><span>"I was there longer than that," said the sofa. "Many a courtship I have helped along."</span></p>
+    <p class="pnext"><span>"What do you think of me?" asked an old mirror that stood on the floor, leaning against the wall. "To be brought to the attic after reflecting generation after generation. All the famous beauties have looked into my face; it is a degradation from which I can never recover. This young mistress who has come here to live does not seem to understand the dignity of our position. Why, I was in the family when her husband's grandmother was a girl and she has doomed me to a dusty attic to dream out the rest of my days."</span></p>
+    <p class="pnext"><span>The shadows deepened in the room and gradually the discarded mirror ceased to complain. It had fallen asleep, but later the moonlight streamed in through the window and showed that its dreams were pleasant ones, for it dreamed of the old and happy days.</span></p>
+    <p class="pnext"><span>The door opened softly and a young girl entered. Her hair was dark and hung in curls over her white shoulders. Her dark eyes wandered over the room until she saw the old mirror.</span></p>
+    <p class="pnext"><span>She ran across the room and stood in front of it. She wore a hoop-skirt over which hung her dress of pale gray, with tiny pink ruffles that began at her slender waist and ended at the bottom of her wide skirt.</span></p>
+    <p class="pnext"><span>Tiny pink rosebuds were dotted over the waist and skirt, and she also wore them in her dark curls, where one stray blossom bolder than the others rested against her soft cheek.</span></p>
+    <p class="pnext"><span>She stood before the mirror and gazed at her reflection a minute; then she curtsied, and said, with a laugh, "I think you will do; he must speak to-night."</span></p>
+    <p class="pnext"><span>She seemed to fade away in the moonlight, and the door opened again and a lady entered, and with her came five handsome children.</span></p>
+    <p class="pnext"><span>They went to the mirror, and one little girl with dark curls and pink cheeks went close and touched it with her finger. "Look," she said to the others, "I look just like the picture of mother when she was a girl." And as they stood there a gentleman appeared beside them and put his arm around the lady and the children gathered around them. They seemed to walk along the moonlight path and disappear through the window.</span></p>
+    <p class="pnext"><span>Softly the door opened again and an old lady entered, leaning on the arm of an old gentleman. They walked to the mirror and he put his arms around her and kissed her withered cheek.</span></p>
+    <p class="pnext"><span>"You are always young and fair to me," he said, and her face smiled into the depths of the old mirror.</span></p>
+    <p class="pnext"><span>The moonlight made a halo around their heads as they faded away.</span></p>
+    <p class="pnext"><span>The morning light streamed in through the window and the mirror's dream was ended.</span></p>
+    <p class="pnext"><span>By and by the door opened and a young girl came in the room. Her dark hair was piled high on her head, and her dark eyes looked over the room until they fell upon a chest in the corner. She went to it and opened it and took out a pale-gray dress with pink ruffles. She put it on; then she let down her hair, which fell in curls over her shoulders.</span></p>
+    <p class="pnext"><span>She ran to the old mirror and looked at herself. "I do look like grandmother," she said. "I will wear this to the old folks' party to-night. Grandfather proposed to grandmother the night she wore this dress." Her cheeks turned very pink as she said this, and she ran out of the room.</span></p>
+    <p class="pnext"><span>Then one day the door opened again and a bride entered, leaning on the arm of her young husband. There were tears in her eyes, although she was smiling. She led him in front of the old mirror. "This old mirror," she said, "has seen all the brides in our family for generations, and I am going far away and may never look into it again. My brother's wife does not want it down-stairs, and I may be the last bride it will ever see," and she passed her hand over its frame caressingly.</span></p>
+    <p class="pnext"><span>And then she went away and the old mirror was left to its dreams for many years. Then one day the door opened again and a lady entered; with her was a young girl.</span></p>
+    <p class="pnext"><span>The lady looked around the attic room until she saw the mirror. "There it is," she said. "Come and look in it, dear." The young girl followed her. "The last time I looked into this dear old mirror," the lady said, "was the day your father and I were married. I never expected to have it for my own then. But your uncle's wife wants to remodel the house, and these things are in the way; she does not want old-fashioned things, and they are willing I should have them."</span></p>
+    <p class="pnext"><span>"Oh, mother, they are beautiful!" said the girl, looking around the room. "We will never part with them; we will take them to our home and make them forget they were ever discarded."</span></p>
+    <p class="pnext"><span>And so the mirror and the sofa and the table and many other pieces of bygone days went to live where they were loved, and the old mirror still reflects dark-haired girls and ladies, who smile into its depths and see its beauty as well as their own.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-255">
+      <span id="headpiece-to-the-contest"></span><span id="the-contest"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Contest" src="images/img-045.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Contest</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE CONTEST</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>The old white rooster was dead.</span></p>
+    <p class="pnext"><span>The hens stood in groups of threes and fours all around the yard, the turkeys were gathered around the big gobbler and seemed to be talking very earnestly.</span></p>
+    <p class="pnext"><span>The ducks stood around the old drake, who was shaking his head emphatically as he talked.</span></p>
+    <p class="pnext"><span>The geese were listening very attentively to the gander, and he was stretching his neck and seemed to be trying to impress them with its length.</span></p>
+    <p class="pnext"><span>"I see no reason now why I should not be king of the yard," he was saying. "White Rooster is dead and there is no other rooster to take his place. I am going to see the hens and ask them what they think.</span></p>
+    <p class="pnext"><span>"White Rooster is dead," he said to them, "and I think I should be king of the yard. My neck is very long and I can see over the heads of all the fowls; I see no reason why I should not take the place of White Rooster."</span></p>
+    <p class="pnext"><span>The turkeys and the geese, seeing the gander approach the hens, ran as fast as they could to hear what he was saying.</span></p>
+    <p class="pnext"><span>The turkey gobbler, hearing the last part of the gander's remark, said: "How can you say that you can see over all heads? Have you forgotten me and my height? And as for being king," he said, "the rooster never should have been cock of the walk. I am a much more majestic-looking bird than any rooster. No, indeed, you should never think of ruling, Sir Gander. I should be king of the yard."</span></p>
+    <p class="pnext"><span>The gobbler walked away, spreading out his wings and letting them drag on the ground and gobbling very loudly.</span></p>
+    <p class="pnext"><span>The ducks and the drake stood listening to all this talk, and as the gobbler walked away the drake said: "I cannot understand why any one should think of being king when I know so much of the world. I am the one to rule, for I have been all around the pond, and it is very large; because of my knowledge I think I should be king."</span></p>
+    <p class="pnext"><span>"He must not be king," whispered one old hen to another; "he would make us go in the water, and we will all be drowned."</span></p>
+    <p class="pnext"><span>They had talked a long time without reaching any decision, when the dog happened along. "What is the matter?" he asked.</span></p>
+    <p class="pnext"><span>"The old white rooster is dead," said the gobbler, who had returned with his family to hear the discussion, "and I think I should be king, and the drake and the gander think they should, but, of course, you can see that I am best suited to rule the yard."</span></p>
+    <p class="pnext"><span>"You can settle that very easily," said the dog. "You can all take a turn at being king, and in that way you will know who is best suited to rule." And so it was decided, and the gobbler was the first one to go on trial. The poor hens tagged along after the turkeys, for the gobbler insisted upon parading all around the yard. The gander and the drake would not follow behind, so the gander and his family walked on one side of the gobbler, and the drake and his family on the other.</span></p>
+    <p class="pnext"><span>The poor hens wept as they followed behind. "I never was so humiliated in my life," said one old hen, "and it is not right."</span></p>
+    <p class="pnext"><span>The next day there was so much dissatisfaction because of the gobbler's overbearing way that the dog decided that the drake must take his turn.</span></p>
+    <p class="pnext"><span>"Everybody must learn to swim," said the drake as soon as he was appointed ruler. "Come down to the pond," and off he started, his family waddling after him.</span></p>
+    <p class="pnext"><span>"What did I tell you?" said the old hen. "This will be the end of us."</span></p>
+    <p class="pnext"><span>The geese did not mind being in the water part of the time, but the turkeys set up such a gobble and the hens cackled so loudly that the dog had to decide right there that the drake was not a suitable king.</span></p>
+    <p class="pnext"><span>The gander, knowing that his time had come, stretched his neck and looked very important.</span></p>
+    <p class="pnext"><span>"You need not go near the pond," he said to the hens, "but you must learn to fly," and he spread out his wings as he spoke and flew over the fence, the geese following him.</span></p>
+    <p class="pnext"><span>The turkeys flew to the top of the fence and roosted there, but the hens and ducks stood on the ground, looking up at them in the most discouraged way, and at the gobbler, who gobbled at them, saying, "You are to be pitied, for you do not see all the sights we do and you never can fly to the top of this fence.</span></p>
+    <p class="pnext"><span>"There is the master," he said. "He is coming down the road and he has something under his arm. I'll tell you what it is when he gets nearer."</span></p>
+    <p class="pnext"><span>The hens were trying to look under the fence and through the holes.</span></p>
+    <p class="pnext"><span>The gobbler looked for a minute, and then he said: "I do believe--" then he stopped. "Yes, it is," he continued, looking again; "it's a rooster."</span></p>
+    <p class="pnext"><span>The gobbler flew down and the turkeys followed and the master drove the gander and his family back to the yard. "You will get your wings clipped to-morrow," he said, and then from under his arm he released a big yellow-and-black rooster, which flew to the ground, looked about, spread his wings and crowed in a way that plainly said: "I am cock of this walk and king of this yard. Let none dispute my rights."</span></p>
+    <p class="pnext"><span>The drake collected his family and started for the pond, and the gander and geese followed along behind.</span></p>
+    <p class="pnext"><span>The turkey spread his wings and held his head high as he strutted away with his family. But he did not impress the new rooster; he was ruler and he knew it.</span></p>
+    <p class="pnext"><span>"Now the sun will know when to rise," said one hen, "and we shall know when to awake."</span></p>
+    <p class="pnext"><span>"Yes," said another, "and we have had a narrow escape; it looked for a while as if our family were to lose its social standing, but now that we have a new king we can hold up our heads again and look down on the others, if we have to go to the top of the wood-pile to do it."</span></p>
+    <p class="pnext"><span>The dog laughed to himself as he walked away. "I knew all the time," he said, "that the new rooster was coming, but I thought it would do them good to know they were only fitted to care for their own flock."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-256">
+      <span id="headpiece-to-the-pink-and-blue-eggs"></span><span id="the-pink-and-blue-eggs"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Pink and Blue Eggs" src="images/img-050.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Pink and Blue Eggs</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE PINK AND BLUE EGGS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"I tell you I saw them with my own eyes," said old White Hen, standing on one foot with her neck outstretched and her bill wide open. "One was pink and the other was blue. They were just like any other egg as far as size, but the color--think of it--pink and blue eggs. Whoever could have laid them?" Old White Hen looked from one to the other of the group of hens and chickens as they stood around her.</span></p>
+    <p class="pnext"><span>"Well, I know that I didn't," said Speckled Hen.</span></p>
+    <p class="pnext"><span>"You needn't look at me," said Brown Hen. "I lay large white eggs, and you know it, every one of you. They are the best eggs in the yard, if I do say it."</span></p>
+    <p class="pnext"><span>"Oh, I would not say that," said White Hen. "You seem to forget that the largest egg ever seen in this yard was laid by me, and it was a little on the brown color; white eggs are all well enough, but give me a brown tone for quality."</span></p>
+    <p class="pnext"><span>"You never laid such a large egg as that but once," replied Brown Hen, "and everybody thought it was a freak egg, so the least said about it the better, it seems to me."</span></p>
+    <p class="pnext"><span>"It is plain to understand how you feel about that egg," said White Hen, "but it does not help us to find out who laid the blue and pink eggs."</span></p>
+    <p class="pnext"><span>"Where did you see them?" asked Speckled Hen.</span></p>
+    <p class="pnext"><span>"On the table, by the window of the farm-house," said old White Hen. "I flew up on a barrel that stood under the window, and then I stretched my neck and looked in the window, and there on the table, in a little basket, I saw those strange-looking eggs."</span></p>
+    <p class="pnext"><span>"Perhaps the master had bought them for some one of us to sit on and hatch out," said Brown Hen.</span></p>
+    <p class="pnext"><span>"Well, I, for one, refuse to do it," said White Hen. "I think it would be an insult to put those gaudy things into our nests."</span></p>
+    <p class="pnext"><span>"I am sure I will not hatch them," said Speckled Hen. "I would look funny hiking around here with a blue chick and a pink chick beside me, and I a speckled hen. No! I will not mother fancy-colored chicks; the master can find another hen to do that."</span></p>
+    <p class="pnext"><span>"You do not think for a minute that I would do such a thing, I hope," said Brown Hen. "I only mentioned the fact that the master might have such an idea, but as for mixing up colors, I guess not. My little yellow darlings shall not be disgraced by a blue and a pink chick running with them."</span></p>
+    <p class="pnext"><span>"Perhaps White Hen is color-blind," said Speckled Hen. "The eggs she saw may be white, after all."</span></p>
+    <p class="pnext"><span>"If you doubt my word or my sight go and look for yourselves," said White Hen, holding her head high. "You will find a blue and a pink egg, just as I told you."</span></p>
+    <p class="pnext"><span>Off ran Speckled Hen and Brown Hen, followed by many others, and all the chicks in the yard.</span></p>
+    <p class="pnext"><span>One after another they flew to the top of the barrel and looked in the window at the eggs White Hen had told them of. It was all too true; the eggs were blue and pink.</span></p>
+    <p class="pnext"><span>"Peep, peep, peep, peep, we want to see the blue and pink eggs, too," cried the chickens. "We never saw any and we want to look at them."</span></p>
+    <p class="pnext"><span>"Oh dear! why did I talk before them?" said Brown Hen. "They will not be quiet unless they see, and how in the world shall I get them up to that window?"</span></p>
+    <p class="pnext"><span>"Did it ever occur to you not to give them everything they cry for?" said White Hen. "Say 'No' once in a while; it will save you a lot of trouble."</span></p>
+    <p class="pnext"><span>"I cannot bear to deny the little darlings anything," said Brown Hen, clucking her little brood and trying to quiet them.</span></p>
+    <p class="pnext"><span>"Well, you better begin now, for this is one of the things you will not be able to do." said White Hen, strutting over to the dog-house to tell the story of the blue and pink eggs to Towser.</span></p>
+    <p class="pnext"><span>"Wouldn't it be just too awful if the master puts those eggs in one of our nests?" asked White Hen, when she had finished her story.</span></p>
+    <p class="pnext"><span>"Oh--oh!" laughed Towser, "that is a good joke on you; don't know your own eggs when you see them."</span></p>
+    <p class="pnext"><span>"Don't tell me I laid those fancy-colored eggs," said White Hen, looking around to see if any of her companions were within hearing distance. "I know I never did."</span></p>
+    <p class="pnext"><span>"But you did," said Towser, laughing again. "I heard the master say to my little mistress, 'If you want eggs to color for Easter take the ones that White Hen laid; they are not so large as the others, and I cannot sell them so well.'"</span></p>
+    <p class="pnext"><span>"Towser, if you will never mention what you have just told me I will tell you where I saw a great big bone this morning," said White Hen. "I was saving it for myself. I like to pick at one once in a while, but you shall have it if you promise to keep secret what you just told me."</span></p>
+    <p class="pnext"><span>Towser promised, and White Hen showed where it was hidden.</span></p>
+    <p class="pnext"><span>A few days after Brown Hen said: "I wonder when master is going to bring out those fancy eggs. If he leaves them in the house much longer no one will be able to hatch them."</span></p>
+    <p class="pnext"><span>"Oh! I forgot to tell you that those eggs were not real eggs, after all," said White Hen, "but only Easter eggs for the master's little girl to play with, so we had all our worry for nothing. Towser told me, but don't say a word to him, for I did not let on that we were worried and didn't know they were only make-believe eggs; he thinks he is so wise, you know, it would never do to let him know how we were fooled."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-257">
+      <span id="headpiece-to-why-the-morning-glory-sleeps"></span><span id="why-the-morning-glory-sleeps"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Why the Morning-glory Sleeps" src="images/img-055.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Why the Morning-glory Sleeps</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">WHY THE MORNING-GLORY SLEEPS</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>One day the flowers got into a very angry discussion over the sun, of whom they were very fond.</span></p>
+    <p class="pnext"><span>"Surely you all must know that he loves me best," said the rose. "He shines upon me and makes me sweeter than any of you, and he gives me the colors that are most admired by man."</span></p>
+    <p class="pnext"><span>"I do not see how you can say that," said the dahlia. "You may give forth more fragrance than I can, but you cannot think for a second that you are more beautiful. Why, my colors are richer than yours and last much longer! The sun certainly loves me the best."</span></p>
+    <p class="pnext"><span>The modest lily looked at the dahlia and said in a low, sweet voice, "I do not wish to be bold, but I feel that the sun loves me and that I should let you know that he gives to me more fragrance than to any of you."</span></p>
+    <p class="pnext"><span>"Oh, oh! Hear lily!" said the others in chorus. "She thinks the king of day loves her best."</span></p>
+    <p class="pnext"><span>The lily hung her head and said no more, for the other flowers quite frightened her with their taunts.</span></p>
+    <p class="pnext"><span>"How can any of you think you are the best beloved of the sun?" said goldenglow. "When you behold my glowing color which the sun bestows on me, do any of you look so much like him as I do? No, indeed; he loves me best."</span></p>
+    <p class="pnext"><span>The hollyhock looked down on the others with pitying glances. "It is plain to be seen that you have never noticed that the sun shines on me with more warmth than on you, and now I must tell you he loves me best and gives me the tenderest of his smiles. See how tall I am and how gorgeous are my colors. He loves me best."</span></p>
+    <p class="pnext"><span>"When it comes to sweetness, I am sure you have forgotten me," said the honeysuckle. "Why, the king of day loves me best, you may be sure! He makes me give forth more sweetness than any of you."</span></p>
+    <p class="pnext"><span>"You may be very sweet," said the pansy, "but surely you know that my pet name is heart's-ease and that the sun loves me best. To none of you does he give such velvet beauty as to me. I am nearest his heart and his best beloved."</span></p>
+    <p class="pnext"><span>The morning-glory listened to all this with envy in her heart. She did not give forth sweetness, as many of the others, neither did she possess the beauty of the rose or the pansy.</span></p>
+    <p class="pnext"><span>"If only I could get him to notice me," she thought. "I am dainty and frail, and I am sure he would admire me if only he could behold me; but the others are always here and in such glowing colors that poor little me is overshadowed by their beauty."</span></p>
+    <p class="pnext"><span>All day morning-glory thought of the sun and wondered how she could attract his attention to herself, and at night she smiled, for she had thought of a plan. She would get up early in the morning and greet him before the other flowers were awake.</span></p>
+    <p class="pnext"><span>She went to bed early that night so that she might not oversleep in the morning, and when the first streak of dawn showed in the sky morning-glory opened her eyes and shook out her delicate folds. The dew was on her and she turned her face toward the sun.</span></p>
+    <p class="pnext"><span>As soon as she peeped into the garden the sun beheld her. "How dainty and lovely you are!" he said. "I have never noticed before the beauty of your colors, morning-glory," and he let his warm glances fall and linger upon her.</span></p>
+    <p class="pnext"><span>The sunflower all this time was watching with jealous eyes, for she was the one who had always welcomed the sun, and this morning he seemed to have entirely forgotten her.</span></p>
+    <p class="pnext"><span>Still sunflower kept her gaze upon them and wondered what she could do to win back her king from the delicate little morning-glory.</span></p>
+    <p class="pnext"><span>But as she looked she saw the morning-glory sway and nod her head. "She is going to sleep," said the sunflower; "his warm breath makes her drowsy, or else she was up so early that she cannot keep awake."</span></p>
+    <p class="pnext"><span>While the sunflower watched, sure enough the morning-glory nodded and closed her eyes. She was fast asleep, and the fickle sun, seeing that she no longer looked upon him, looked away and beheld the sunflower looking toward him with longing eyes.</span></p>
+    <p class="pnext"><span>"Good morning, King," she said, as she caught his eye, and she was wise enough not to let him know she had seen him before. So the sun smiled and turned his face upon them all, and the sunflower kept to herself what she had seen, knowing full well that she was the one who knew best how to keep his first and last glances.</span></p>
+    <p class="pnext"><span>A little later one of the flowers called out: "Look at morning-glory; she is still sleeping. Let us tell her it is time to awaken."</span></p>
+    <p class="pnext"><span>"Morning-glory! morning-glory!" they called, but she did not answer. She was sound asleep.</span></p>
+    <p class="pnext"><span>"That is strange," said the rose. "I wonder if she has gone to sleep never to awake. I have heard of such things happening."</span></p>
+    <p class="pnext"><span>After two or three mornings the other flowers ceased to notice morning-glory, for they thought she had ceased to be one of them, but the wise sunflower kept her own counsel. She knew that morning-glory had to sleep all day in order that she might not miss the sun; but, as I told you, she was wise enough not to complain, and she kept his love for her by so doing.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-258">
+      <span id="headpiece-to-dorothy-and-the-portrait"></span><span id="dorothy-and-the-portrait"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Dorothy and the Portrait" src="images/img-059.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Dorothy and the Portrait</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">DOROTHY AND THE PORTRAIT</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Dorothy was very fond of her grandmother and grandfather, and liked to visit them, but there were no little girls to play with, and sometimes she was lonely for some one her own age. She would wander about the house looking for the queer things that grandmothers always have in their homes. The hall clock interested Dorothy very much. It stood on the landing at the top of the stairs, and she used to sit and listen to its queer tick-tock and watch the hands, which moved with little nervous jumps. Then there were on its face the stars and the moon and the sun, and they all were very wonderful to Dorothy. One day she went into the big parlor, where there were pictures of her grandfather and grandmother, and her great-grandfather and great-grandmother, also.</span></p>
+    <p class="pnext"><span>Dorothy thought the "greats" looked very sedate, and she felt sure they must have been very old to have been the parents of her grandfather. But the picture that interested her the most was a large painting of three children, one a little girl about her own age, and one other older, and a boy, who wore queer-looking trousers, cut off below the knee. His suit was of black velvet, and he wore white stockings and black shoes. The little girls were dressed in white, and their dresses had short sleeves and low necks. The older girl had black hair, but the one that Dorothy thought was her age had long, golden curls like hers, only the girl in the picture wore her hair parted, and the curls hung all about her face.</span></p>
+    <p class="pnext"><span>Dorothy climbed into a big chair and sat looking at them. "I wish they could play with me," she thought, and she smiled at the little golden-haired girl. And then, wonderful to tell, the girl in the picture smiled at Dorothy.</span></p>
+    <p class="pnext"><span>"Oh! are you alive?" asked Dorothy.</span></p>
+    <p class="pnext"><span>"Of course I am," the little girl replied. "I will come down, if you would like to have me, and visit with you."</span></p>
+    <p class="pnext"><span>"Oh, I should be so glad to have you!" Dorothy answered.</span></p>
+    <p class="pnext"><span>Then the boy stepped to the edge of the frame, and from there to the top of a big chair which stood under the picture, and stood in the chair seat. He held out his hand to the little girls and helped them to the floor in the most courtly manner. Dorothy got out of her chair and asked them to be seated, and the boy placed chairs for them beside her.</span></p>
+    <p class="pnext"><span>"What is your name?" asked the golden-haired girl, for she was the only one who spoke.</span></p>
+    <p class="pnext"><span>"That was my name," she said, when Dorothy told her. "I lived in this house," she continued, "and we used to have such good times. This is my sister and my brother." The little girl and boy smiled, but they let their sister do all the talking. "We used to roast chestnuts in the fireplace," she said, "and once we had a party in this room, and played all sorts of games."</span></p>
+    <p class="pnext"><span>Dorothy could not imagine that quiet room filled with children.</span></p>
+    <p class="pnext"><span>"Do you remember how we frightened poor old Uncle Zack in this room?" she said to her brother and sister, and then they all laughed.</span></p>
+    <p class="pnext"><span>"Do tell me about it," said Dorothy.</span></p>
+    <p class="pnext"><span>"These glass doors by the fireplace did not have curtains in our day," said the little girl, "and there were shells and other things from the ocean in one cupboard, and in the other there were a sword and a helmet and a pair of gauntlets. My brother wrapped a sheet around him and put on the helmet and the gauntlets, and, taking the sword in his hand, he climbed into the cupboard and sat down. We girls closed the doors and hid behind the sofa. Uncle Zack came in to fix the fire, and my brother beckoned to him. Poor Zack dropped the wood he was carrying and fell on his knees, trembling with fright. The door was not fastened and my brother pushed it open and pointed the sword at poor Uncle Zack.</span></p>
+    <p class="pnext"><span>"'Don' hurt a po' ol' nigger,' said Zack, very faintly. 'I 'ain' don' noffin', 'deed I 'ain'.'</span></p>
+    <p class="pnext"><span>"'You told about the jam the children ate,' said my brother, in a deep voice, 'and you know you drank the last drop of rum Mammy Sue had for her rheumatism, and for this you must be punished,' and he brought the sword down on the floor of the cupboard with a bang.</span></p>
+    <p class="pnext"><span>"Poor Uncle Zack fell on his face with fright. This was too much for my sister and me, and we laughed out.</span></p>
+    <p class="pnext"><span>"You never saw any one change so quickly as Uncle Zack. He jumped up and we ran, but my brother had to get out of his disguise, and Uncle Zack caught him. He agreed not to tell our father if we did not tell about his fright, and so we escaped being punished."</span></p>
+    <p class="pnext"><span>"Tell me more about your life in this old house," said Dorothy, when the little girl finished her story. But just then the picture of Dorothy's great-grandmother moved and out she stepped from her frame. She walked with a very stately air toward the children and put her hand on the shoulder of the little girl who had been telling the story, and said: "You better go back to your frame now."</span></p>
+    <p class="pnext"><span>"Oh dear!" said the little girl. "I did so dislike being grown up, and I had forgotten all about it, when my grown-up self reminds me. That is the trouble when you are in the room with your grown-up picture," she told Dorothy. "You see, I had to be so sedate after I married that I never even dared to think of my girlhood, but you come in here again some day and I will tell you more about the good times we had."</span></p>
+    <p class="pnext"><span>The boy mounted the chair first and helped his sisters back into the frame. Dorothy looked for her great-grandmother, but she, too, was back in her frame, looking as sedate as ever. The next day Dorothy asked her grandmother who the children were in the big picture.</span></p>
+    <p class="pnext"><span>"This one," she said, pointing to the little golden-haired girl, "was your great-grandmother; you were named for her; and the other little girl and boy were your grandfather's aunt and uncle. They were your great-great-aunt and uncle."</span></p>
+    <p class="pnext"><span>Dorothy did not quite understand the "great-great" part of it, but she was glad to know that her stately-looking great-grandmother had once been a little girl like her, and some day, when the great-grandmother's picture is not looking, she expects to hear more about the fun the children had in the days long ago.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-259">
+      <span id="headpiece-to-mistress-pussy-s-mistake"></span><span id="mistress-pussy-s-mistake"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Mistress Pussy's Mistake" src="images/img-064.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Mistress Pussy's Mistake</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">MISTRESS PUSSY'S MISTAKE</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>A very kind gentleman, who lived in a big house which was in the midst of a beautiful park, had a handsome cat of which he was very fond. While he felt sure Pussy was fond of him, he knew very well she would hurt the birds, so he put a pretty ribbon around Pussy's neck, and on it a little silver bell which tinkled whenever she moved and this warned the birds that she was near.</span></p>
+    <p class="pnext"><span>Pussy resented this, but pretended she did not care. One day a thrush was singing very sweetly on the bough of a tree which overhung a small lake. Pussy walked along under the tree, and, looking up at the thrush, said: "Madam Thrush, you have a most beautiful voice, and you are a very handsome bird. I do wish I were nearer to you, for I am not so young as I was once, and I cannot hear so well."</span></p>
+    <p class="pnext"><span>The thrush trilled a laugh at Pussy, and said: "Yes, Miss Puss, I can well believe you wish me nearer, but not to see or hear me better, but that you might grasp me."</span></p>
+    <p class="pnext"><span>Pussy pretended not to hear the last remark, but said: "My beautiful Thrush, will you not come down where I can hear you better? I cannot get about as nimbly as I used to when I was young, or I would go to you."</span></p>
+    <p class="pnext"><span>"I cannot sing so well on the ground," replied the thrush. "You can come up here, even if you are not so spry as you were. But tell me, do you not find the bell you wear very trying to your nerves?"</span></p>
+    <p class="pnext"><span>"Oh no," answered sly Pussy. "It is so pretty that I'm glad to wear it, and my master thinks I am so handsome that he likes to see me dressed well. And then he can always find me when he hears the bell. That is why I wear it."</span></p>
+    <p class="pnext"><span>"I understand," answered the thrush, "and we birds are always glad to hear it, too." And she trilled another laugh at Pussy and added, "You are certainly a very handsome creature, Miss Puss."</span></p>
+    <p class="pnext"><span>Pussy all this time had very slowly climbed the tree, for she wanted the thrush to think she was old and slow, but the bird had her bright eyes upon her. When Pussy reached the branch the thrush was on she stopped and seated herself.</span></p>
+    <p class="pnext"><span>"Now, my pretty little friend, do sing to me your loudest song."</span></p>
+    <p class="pnext"><span>She hoped it would be loud enough to drown the tinkle of the bell. The thrush began and was soon singing very sweetly. Pussy took a very cautious step and then remained quiet. The thrush stopped singing and spread her wings.</span></p>
+    <p class="pnext"><span>"Oh, do not stop!" said Puss. "Your song was so soothing I was in a doze; do sing again." And she moved a little closer.</span></p>
+    <p class="pnext"><span>The thrush took a step nearer to the end of the bough and said: "I am glad you like my voice. I will sing again if it pleases you so much."</span></p>
+    <p class="pnext"><span>She began her song, but she kept her eyes on Puss, and as Puss drew nearer she moved closer to the end of the swinging bough.</span></p>
+    <p class="pnext"><span>She had reached a very high note when Puss gave a spring, but the thrush was too quick; she flew out of Pussy's reach, and splash went Pussy into the lake, for she had not noticed that the thrush was moving to the end of the bough, so intent was she on the thought of catching her.</span></p>
+    <p class="pnext"><span>Poor Pussy was very wet when she scrambled to the bank of the lake, and the birds were chirping and making a great noise.</span></p>
+    <p class="pnext"><span>"How did you like your bath, Miss Puss?" the thrush called to her. "You should never lay traps for others, for often you fall into them yourself."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-260">
+      <span id="headpiece-to-kid"></span><span id="kid"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Kid" src="images/img-067.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Kid</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">KID</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Kid was one of those little boys who seemed to have grown up on the streets of the big city where he lived.</span></p>
+    <p class="pnext"><span>He never remembered a mother or a father, and no one ever took care of him. His first remembrance was of an old woman who gave him a crust of bread, and he slept in the corner of her room. One day they carried her away, and since then Kid had slept in a doorway or an alley.</span></p>
+    <p class="pnext"><span>By selling papers he managed to get enough to eat, and if he did not have the money he stole to satisfy his hunger.</span></p>
+    <p class="pnext"><span>He was often cold and hungry, but he saw many other children that were in the same condition, and he did not suppose that any one ever had enough to eat or a warm place to sleep every night.</span></p>
+    <p class="pnext"><span>Kid went in to the Salvation Army meetings, when they held them in his neighborhood, because it was a place where the wind did not blow, and while there he heard them sing and talk about Some One who loved everybody and would help you if only you would ask Him. Kid was never able to find out just where this Person lived, and, therefore, he could not ask for help.</span></p>
+    <p class="pnext"><span>One day Kid saw a lady who was too well dressed to belong in his part of the city, and he followed her, thinking that she might have a pocket-book he could take. The opportunity did not offer itself, however, and before Kid realized it he was in a part of the city he had never seen before.</span></p>
+    <p class="pnext"><span>The buildings were tall and the streets much cleaner than where he lived. Kid walked along, looking in windows of the stores, when he noticed a lady standing beside him with a jeweled watch hanging from her belt.</span></p>
+    <p class="pnext"><span>He had never seen anything so beautiful or so easy to take, and he waited for a few more people to gather around the window, and then he carefully reached for the watch, and with one pull off came the trinket, and away ran Kid, like a deer, with the watch clasped firmly in his begrimed little hand.</span></p>
+    <p class="pnext"><span>On and on he ran, not knowing where he was going--nor caring, for that matter--and it seemed to Kid that the whole world was crying, "Stop, thief!" and was chasing him.</span></p>
+    <p class="pnext"><span>After a while the noise grew fainter and fainter and he stopped and looked back. There was not a person in sight.</span></p>
+    <p class="pnext"><span>Kid looked around him. All the houses were large with clean stone steps in front of them. Kid sat down on the bottom step of one of these houses and looked at his treasure.</span></p>
+    <p class="pnext"><span>He held it to his ear and heard its soft tick, then he looked at the sparkling stones on the case. He opened it and watched the little hands move, then he opened the back part, and there was the picture of a baby, a little boy, Kid thought. Around its chubby face were curls, and its eyes were large and earnest-looking. Kid sat gazing at it for some minutes, wondering who it was. When he looked up he saw a large building across the street with a steeple on it, and on the top of that a cross.</span></p>
+    <p class="pnext"><span>The door of the building was open, and after a while Kid walked across the street and up the long, wide steps. He went in and looked cautiously about. It was still and no one was to be seen.</span></p>
+    <p class="pnext"><span>There were two doors, and Kid went to one of them and pushed it open. He thought for a minute he was dreaming, for he did not suppose that anything so grand could be real.</span></p>
+    <p class="pnext"><span>There were rows and rows of seats, and at the very end of the big room Kid saw a light. He walked down one of the aisles to where the little flame was burning, and stood in front of the altar.</span></p>
+    <p class="pnext"><span>Kid looked at everything with a feeling of awe, but he had not the slightest idea of what it all meant, and he wondered who lived in this beautiful house, and thought it strange that no one appeared and told him to go out.</span></p>
+    <p class="pnext"><span>There were pictures on the wall and Kid came to one of a sweet-faced lady who was holding a little child. Kid started and stepped back as he looked at it. "It is the baby in the watch," he said. "This must be where he lives and that is his mother." Some one was coming. He was caught at last, he felt sure. He slid into a pew and crawled under the seat and kept very still--so still, in fact, that he fell asleep. When he awoke a light was burning in the church and its rays fell across the picture of the mother and child in such a way that the eyes of the mother seemed to be looking straight at Kid under the seat.</span></p>
+    <p class="pnext"><span>For the first time in his life he felt like crying. "I wish I had a mother," he thought, "and I should like to have her hold me in her arms just as that little boy's mother is holding him. I would tell her about this watch and perhaps she would tell me how to get it back to the lady."</span></p>
+    <p class="pnext"><span>Kid crept from under the seat and stood up, and coming toward him down the aisle was a man. Kid thought he wore a queer-looking costume, and he dodged back of the seat; but the man had seen him and there was no use in trying to run away; besides that, Kid was not at all sure that he wished to get away.</span></p>
+    <p class="pnext"><span>"Is this your house?" asked Kid, when the man came up to him.</span></p>
+    <p class="pnext"><span>"No, my son," he replied; "this is the house of God."</span></p>
+    <p class="pnext"><span>Kid's heart leaped for joy; that was the name of the One the Salvation Army people told him about, who loved everybody and helped you.</span></p>
+    <p class="pnext"><span>"If you please," said Kid, "I should like to see Him."</span></p>
+    <p class="pnext"><span>The good man looked at Kid very earnestly, and then he said, "If you will tell me what you wish to see Him about, I am sure I can help you."</span></p>
+    <p class="pnext"><span>Kid told him about the watch and that he felt sure the lady lived there, as the baby in the big picture was very much like the picture in the watch. "And if this is God's house," said Kid, "I thought He might be the father and forgive me. I am very sorry that I took it."</span></p>
+    <p class="pnext"><span>The good man took Kid by the hand. "Come with me," he said; "you are forgiven, I am sure."</span></p>
+    <p class="pnext"><span>Kid was given a good supper, and for the first time in his life he slept in a real bed.</span></p>
+    <p class="pnext"><span>The next day the good man found the owner of the watch, and when she heard Kid's story she forgave him.</span></p>
+    <p class="pnext"><span>Kid was placed in a school, where he learned to be a good boy, as well as to be studious, and he soon forgot the old life. He grew to be a man of whom any mother could have been proud. But the only mother Kid ever knew was the mother of the little boy in the picture, which he cherishes as a thing sacred in his life.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-261">
+      <span id="headpiece-to-the-shoemaker-rat"></span><span id="the-shoemaker-rat"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Shoemaker Rat" src="images/img-073.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Shoemaker Rat</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE SHOEMAKER RAT</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>One day a rat gnawed his way into a pantry, and after he had eaten all he wanted he grew bold and went into the kitchen.</span></p>
+    <p class="pnext"><span>There the cook saw him and chased him with a broom, but, not being able to hit him as he ran out of the door, she picked up a pair of shoes that were standing near and threw them after him.</span></p>
+    <p class="pnext"><span>The rat picked them up and put them on. On his way home he met a cat. "What have you on your feet?" he asked the rat.</span></p>
+    <p class="pnext"><span>"Can you not see, my dear Tom?" said the rat. "They are shoes. I am a shoemaker, and, of course, must wear my own product."</span></p>
+    <p class="pnext"><span>"Make me a pair," said the cat, "and I will spare your life."</span></p>
+    <p class="pnext"><span>"Very well," replied the rat, "but first you must bring me some leather."</span></p>
+    <p class="pnext"><span>So the cat ran away and brought back two hides.</span></p>
+    <p class="pnext"><span>When the rat saw the amount of leather he was struck with an idea. "My dear Tom," he said, "I can make you a suit of clothes and a pair of gloves as well as the shoes, and you will be the envy of all the other cats."</span></p>
+    <p class="pnext"><span>Tom was delighted and told the rat to hurry and make the outfit.</span></p>
+    <p class="pnext"><span>The wise rat first made the gloves and covered Tom's sharp claws. Then he made the shoes for the hind feet, and when he had that done he felt safe.</span></p>
+    <p class="pnext"><span>"Now you must wait," he said; "until I get something with which I can fasten the coat." He ran away and returned with some long, sharp thorns.</span></p>
+    <p class="pnext"><span>Next the rat put the leather around Tom's body and drew it tight, fastening it with a thorn which he pushed so that the sharp point pricked Tom.</span></p>
+    <p class="pnext"><span>"What are you doing?" asked Tom, angry at being hurt; but he could not move, the leather costume was so stiff and tight, but he grabbed at the rat with his mouth, and caught him by the tail.</span></p>
+    <p class="pnext"><span>The rat ran, leaving his tail in Tom's mouth.</span></p>
+    <p class="pnext"><span>"I'll know you," Tom called after him. "When I am out of this suit I will catch you and eat you."</span></p>
+    <p class="pnext"><span>The rat had not thought of that and he wondered what he should do, but he was a wise old fellow, and when he reached home he called all his brothers and sisters and cousins and aunts about him.</span></p>
+    <p class="pnext"><span>"I met a cat to-day," he said, "who had been to the city where all the styles are new, and he told me that all the city rats are having their tails cut off, so I had mine done. If you want to be in style," he told them, "you must have your tails like mine."</span></p>
+    <p class="pnext"><span>"Does it hurt?" asked one.</span></p>
+    <p class="pnext"><span>"Not a bit," answered the sly fellow, "and you have no idea how comfortable it is running about without a tail to look after. It is very expensive to have it cut," he explained; "that is the only difficult part. I had to pay twenty pieces of cheese. But I watched while another fellow was having his cut, and I am sure I can do it as well as the rat that did mine. And if you wish to be in style at a very low rate I will take off your tails for five pieces of cheese each."</span></p>
+    <p class="pnext"><span>The rats all agreed, and ran away to get the cheese, and while they were gone the wise rat ran for a chopping-knife.</span></p>
+    <p class="pnext"><span>Soon he had the tails cut and a goodly store of cheese. "Now," he said to himself, "Tom will never know me from the other rats."</span></p>
+    <p class="pnext"><span>He kept his eyes open for Tom, who had called his friends to help him out of his suit and told them to watch for a rat without a tail. But when they saw all the tailless rats they gave up looking for one who had put Tom into the suit of leather, and Tom, not liking to hunt any too well, gave it up also. "But the next time I meet a rat," said Tom, "I will catch him, no matter whether he has a tail or not."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-262">
+      <span id="headpiece-to-the-poppies"></span><span id="the-poppies"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Poppies" src="images/img-076.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Poppies</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE POPPIES</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>A long distance from here, in a far Eastern country, there once lived a very rich king. All kings are not rich, you know, but this one was, and his jewels were the most beautiful ever seen.</span></p>
+    <p class="pnext"><span>But this king dearly loved all the good things of this world and gave feasts and dances that lasted for days without any one sleeping. Of course he could not lead such a life as that and have good health, and at last there came a time when the king could not sleep.</span></p>
+    <p class="pnext"><span>At last he offered a reward to any one who could put him to sleep, no matter how it was accomplished. He said to the one who could do this he would give half his kingdom.</span></p>
+    <p class="pnext"><span>The poor king was the subject for many experiments, and when he had almost given up hope of ever sleeping again there came a strange-looking man to the gate of the castle. He wore a turban and a long, flowing robe of white, and wore around his neck many chains and strings of queer-looking beads.</span></p>
+    <p class="pnext"><span>"I can make the king sleep," he said, "but I must be allowed to have the grounds of the castle to myself and the king must obey me in every way."</span></p>
+    <p class="pnext"><span>The king was ready to do anything, and so the strange-looking man began his work, but before he would do anything for the king he insisted upon having half the kingdom given into his hands, and when this was done he set to work. No one was allowed to be near him, and the king was left alone in the castle with him.</span></p>
+    <p class="pnext"><span>One morning, not long after, the king saw what looked to be a sea of green all around the castle, but it really was a bed of green leaves, and soon there appeared white flowers among the leaves, and then the strange man told the king to walk among them.</span></p>
+    <p class="pnext"><span>Soon the king felt a drowsy feeling stealing over him, and he sat down in the midst of the sea of green and in a few minutes he was sound asleep.</span></p>
+    <p class="pnext"><span>Then the strange man began to repeat something in a sing-song tone and wave his hands over the sleeping king. He walked among the leaves and flowers, repeating his queer rhyme, and the leaves and flowers grew taller and taller until the king could not be seen, and the man moved away, still chanting:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Poppy, poppy, flower of sleep,</span>
+          </div>
+          <div class="line">
+            <span>Your drowsy spell around him keep,</span>
+          </div>
+          <div class="line">
+            <span>For I can all his kingdom take</span>
+          </div>
+          <div class="line">
+            <span>If you do not let him wake."</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>The poppies grew until they reached the top of the castle, and every one who went near to look for the king fell under the spell of their strange power until the people around gave it up and the strange man became king; he built a new castle and the old one was forgotten.</span></p>
+    <p class="pnext"><span>All went well with the new king until a young man called at his castle and asked him about the old king, and the servants told him how the strange flowers had grown around the castle and no one could go near, and that every one thought that the old king was dead.</span></p>
+    <p class="pnext"><span>The new king, when he heard that the stranger was asking for the old king, had him driven from the castle.</span></p>
+    <p class="pnext"><span>"Tell your master," said the stranger to the servants, "that he will hear from me again."</span></p>
+    <p class="pnext"><span>The stranger went into the woods, where there lived an old witch, and at midnight they came out and went to the castle among the strange flowers.</span></p>
+    <p class="pnext"><span>The witch held her hands high over her head and waved them up and down, saying all the time:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Poppy, poppy, sleepy flower,</span>
+          </div>
+          <div class="line">
+            <span>Now I have you in my power.</span>
+          </div>
+          <div class="line">
+            <span>I would have you shorter grow</span>
+          </div>
+          <div class="line">
+            <span>Until the sleeping one you show."</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>Down came the tall flowers and bushes until the young man cried out, "Here he is," and then the flowers ceased to grow small. The witch knelt beside the sleeping king and whispered in his ear:</span></p>
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"Awake, good king, 'tis break of day,</span>
+          </div>
+          <div class="line">
+            <span>And drive the false king far away."</span>
+          </div>
+          <div class="line">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <p class="pfirst"><span>The king opened his eyes and looked at the witch and the young man beside her. "What has happened?" he asked.</span></p>
+    <p class="pnext"><span>"I will leave you to tell him," said the witch. "The sun is up and I must go."</span></p>
+    <p class="pnext"><span>"When you offered to give half your kingdom to the one who could make you sleep," said the young man, "I set out for your castle with a box which contained a strange flower that had the power to make people sleep, but it had to be used with the greatest care, and I alone knew the secret of using it, for it was given to my grandmother by an old witch doctor.</span></p>
+    <p class="pnext"><span>"Before I could reach you I was overtaken by a band of robbers and the box stolen. They made me tell what I intended doing with the flower, on pain of death, but I did not tell the whole secret. Then they put me in a cave and rolled a stone in front of it too heavy for me to move, and left. I was almost dead from starvation when I was found by some peasants, who nursed me until I was well enough to travel, when I hurried here, only to find that one of the band of robbers had taken your whole kingdom after putting you to sleep with the charmed flower.</span></p>
+    <p class="pnext"><span>"He drove me from the castle when he heard that I was asking for you, and if it had not been for the witch who lives in the wood I should not have been able to awaken you. She knew the secret, as she is the daughter of the witch who gave the flower to my grandmother."</span></p>
+    <p class="pnext"><span>When the king heard the strange story he hurried with the young man to the castle where the robber king lived. He was asleep when they arrived, and the servants, who did not like their new master, ran out to meet the old king, and when they heard what had happened they went back to the castle and bound the robber while he slept, and when he awoke he was so frightened that he promised to tell where the rest of his band could be found if they would spare his life.</span></p>
+    <p class="pnext"><span>This they promised to do, and the country was rid of these bad men, for they were put on a ship and made to work the rest of their lives.</span></p>
+    <p class="pnext"><span>The king was so grateful to the young man who rescued him that he made him his heir, and when the king died he left him his kingdom.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-263">
+      <span id="headpiece-to-little-china-doll"></span><span id="little-china-doll"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Little China Doll" src="images/img-081.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Little China Doll</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">LITTLE CHINA DOLL</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>In a shop window sat a little China Doll. She had been in the store so long she could not remember ever living in any other place.</span></p>
+    <p class="pnext"><span>Long, long ago there were other china dolls, but one by one some little girl had carried them away and she was left alone. China Doll had black painted hair and big, staring eyes, and her lips and cheeks were very red. Her body was filled with sawdust and her hands and arms to the elbow were china, as were her feet and legs to her knees.</span></p>
+    <p class="pnext"><span>By and by wax dolls came to the store; they had real hair, all curls, and eyes that would open and close, and poor China Doll was set back in the window, and after a while she was put in a box on the shelf and taken out only once a year--at Christmas-time--when she was dusted and put in the window again. She felt very lonely with so many stylish wax dolls, and as she had given up hope of ever being chosen by any little girl, she was glad when the little old lady who kept the store put her back in the box on the shelf.</span></p>
+    <p class="pnext"><span>At last there came a time when the children no longer came to the store, but went to the big city for their toys, and China Doll and the little old store-keeper grew old together.</span></p>
+    <p class="pnext"><span>China Doll sat in the window all the time now, with tape and thread and other useful things, but was the only thing little folk could want.</span></p>
+    <p class="pnext"><span>One day in summer a tally-ho stopped in front of the store, and a party of young people came in. They bought a number of things and filled the old store with their laughter. Suddenly the prettiest girl reached into the window and took out China Doll. "Oh, you dear, quaint little doll!" she said. "My grandmother has one just like this, girls, and I have asked her many times to give it to me to make a French pincushion, but she will not let me have it."</span></p>
+    <p class="pnext"><span>Oh, how China Doll's heart beat! Could it be true that she was going at last? Yes, the pretty girl bought her and took her away on the tally-ho.</span></p>
+    <p class="pnext"><span>The next day she dressed China Doll in the prettiest silk dress, such a one as she had dreamed of years ago, with an overskirt and purled sleeves. Then she made her the dearest poke-bonnet trimmed with little roses. She also made her a pair of kid boots.</span></p>
+    <p class="pnext"><span>When China Doll was all dressed the pretty girl put a ribbon over her arm, and on each end was a little bandbox. Then she stood China Doll on her dressing-table and used the little boxes for pincushions. And there China Doll lived a very happy life, which teaches that all things come to those who wait.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-264">
+      <span id="headpiece-to-the-disorderly-girl"></span><span id="the-disorderly-girl"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Disorderly Girl" src="images/img-084.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Disorderly Girl</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE DISORDERLY GIRL</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Louise was just going out of the door with her sled when her mother called to her. Louise hesitated, for she knew that her mother was calling her to make her play-room tidy and she wanted to go coasting with the other children.</span></p>
+    <p class="pnext"><span>She went back slowly and asked, "What is it, mother?"</span></p>
+    <p class="pnext"><span>"Your play-room must be put in order before you can go out to play," her mother replied. "You have had plenty of time this week to do it, but you have neglected it, and now you cannot put it off another day."</span></p>
+    <p class="pnext"><span>"Why can't Jane do it?" asked Louise.</span></p>
+    <p class="pnext"><span>"Jane will clean the room," her mother replied, "but it is your duty to pick up the books and toys that are strewn around."</span></p>
+    <p class="pnext"><span>Louise pouted, but she knew that she must do as her mother said, and she took off her hat and coat and went up to her play-room. She went in and closed the door. It certainly was a very disorderly-looking room. Books were on the floor and games were on the table, doll clothes were strewn in all parts of the room.</span></p>
+    <p class="pnext"><span>Louise had picked up most of the things when she saw from the window her little friend Clara passing the house. "Clara!" she called, "wait for me, I have to put my play-room in order before I can go coasting." But Clara would not wait.</span></p>
+    <p class="pnext"><span>Louise closed the window, threw herself on the couch, and began to cry, saying she thought it was mean everybody was going coasting but her.</span></p>
+    <p class="pnext"><span>All at once she saw two little girls walking toward her. They looked just like her dolls--Bella and Emily--only they were as large as herself.</span></p>
+    <p class="pnext"><span>Louise tried to get up, but she was unable to move.</span></p>
+    <p class="pnext"><span>"Let us undress her," said Bella Doll, coming over to Louise and lifting her by one arm.</span></p>
+    <p class="pnext"><span>"Yes," said Emily Doll, "and comb her hair."</span></p>
+    <p class="pnext"><span>Then Louise knew what had happened--she had turned into a doll and the dolls had become little girls.</span></p>
+    <p class="pnext"><span>The doll girls undressed Louise and put on her nightdress, pulling it over her head in the most careless manner, Louise thought. Then they combed her hair, pulling it terribly.</span></p>
+    <p class="pnext"><span>"I wonder how she likes to have her hair pulled," said Bella Doll.</span></p>
+    <p class="pnext"><span>"She knows how it feels, now," said Emily.</span></p>
+    <p class="pnext"><span>"I think she better go out," said Bella Doll, "instead of going to bed," and they dressed her in a thin white dress. "Now we will take her out in the cold; that is the way she does with us."</span></p>
+    <p class="pnext"><span>They fastened her clothes with pins and pushed them right through her body, and after she was dressed they changed their minds about taking her out and threw her on the floor and began playing games.</span></p>
+    <p class="pnext"><span>"I wonder if they are going to leave me here," thought Louise. "Some one will be sure to step on me." Just then she saw a Teddy Bear lying on his side under the couch. "Why are you under there?" Louise asked.</span></p>
+    <p class="pnext"><span>"The little girl who was playing with me dropped me back of the couch a week ago," he said, "and I have been here ever since, and you will probably remain on the floor where you are now, for she never picks up her toys. She is a very careless girl."</span></p>
+    <p class="pnext"><span>Louise did not reply, for just then Emily Doll came over to the couch for a book and pushed Louise out of the way with her foot. Bella Doll set out a croquet set and one of the balls hit Louise on the head. Then Emily dropped her book and said: "Come along, Bella, let us go outdoors."</span></p>
+    <p class="pnext"><span>Louise watched them as they went out. "Oh, this is the way she always leaves her room," said Teddy Bear, for he could not see from under the couch there were two little girls, and thought it was Louise who went out of the door. "She never thinks of us," the Teddy Bear continued, "or how uncomfortable we may be, for she is a very careless and untidy girl."</span></p>
+    <p class="pnext"><span>The door opened and Bella Doll came in. She went over to the couch for her hat and Louise saw her foot over her head. "She will break me if she steps on me," cried poor Louise, and she jumped up as she cried aloud. There she was on the couch. She had been asleep. She got up and finished her work, when suddenly she thought of the Teddy Bear, and looked under the couch. There he was on his side just as she had seen him in her dream. Louise picked him up and set him in a chair; then she looked at Bella's clothes to make sure there were no pins pricking her, and after looking at Emily also she put both of them in a comfortable place. Her books were put on a shelf, and she resolved never again to let her room get so untidy or to let her dolls or Teddy Bear suffer from neglect. "Perhaps they do feel things," she said. "Anyway, I'll be sure not to hurt them or let them be in uncomfortable positions, for I was very miserable lying on the floor thinking I might be stepped upon."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-265">
+      <span id="headpiece-to-the-wise-old-gander"></span><span id="the-wise-old-gander"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Wise Old Gander" src="images/img-088.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Wise Old Gander</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE WISE OLD GANDER</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Once there lived a farmer who was not a good caretaker. He did not have a house for the hens and chickens and geese and ducks, and Old Fox, who lived in a hole over the hill, never had any trouble in getting a nice goose or a fat hen for his supper or breakfast.</span></p>
+    <p class="pnext"><span>"Something must be done at once," said Madam Goose. "There will be no one left in the whole yard if this keeps on. Why, only last night Madam Gray Hen was carried off and she has left all those little chicks; it is really too awful to think of."</span></p>
+    <p class="pnext"><span>"But what can we do?" asked Gray Goose. "The rooster does not know, for I heard one of his family ask him, and he only said the master should take better care of us."</span></p>
+    <p class="pnext"><span>"So he should," replied Madam Goose, "but he doesn't, so we must care for ourselves unless we wish to be carried off, too. Let us go to the gander; he may be able to help us."</span></p>
+    <p class="pnext"><span>"Come with us," they called to the rooster and black hen who were talking together; "we are going to see the gander and ask him to help us to be rid of Old Fox over the hill."</span></p>
+    <p class="pnext"><span>The gander stretched out his neck and blinked his eyes as he listened to their tale of woe.</span></p>
+    <p class="pnext"><span>"You are right, something must be done," he said; "and you are quite right in coming to me also. I will think over the matter and give you my advice later."</span></p>
+    <p class="pnext"><span>"Later!" screamed Madam Goose. "Later there will be no need for advice; there will be no one to give it or to advise. What we need is advice at once, and something that will rid us of Old Fox under the hill. He is eating the whole yard, one by one."</span></p>
+    <p class="pnext"><span>"Well, well," answered the gander, standing on one foot and then on the other. "I will think over the matter for a short time and then tell you my decision. You know, my dear madam, that great minds must have quiet to think out important matters. Leave me, I beg of you all, for a little while."</span></p>
+    <p class="pnext"><span>As soon as the gander was alone he waddled over to the pig-pen. "Mr. Pig," he said, "I am going to ask your advice. Old Fox over the hill is carrying off all the fowls and something must be done."</span></p>
+    <p class="pnext"><span>"Ugh, ugh," grunted the pig. "I can tell you what will frighten him away. I will stay awake to-night and grunt at him; he will know better than to linger where I am."</span></p>
+    <p class="pnext"><span>"Thank you, thank you, Mr. Pig," said the gander, backing away from the pig-pen. "I will tell my friends, and I am sure they will feel safe to-night."</span></p>
+    <p class="pnext"><span>"Conceited fellow," said the gander. "I guess it will take more than his grunts to scare that foxy fellow."</span></p>
+    <p class="pnext"><span>Then he went to the donkey. "He isn't very wise," thought the gander, "but sometimes those who have the least wisdom speak wisdom without knowing it.</span></p>
+    <p class="pnext"><span>"Mr. Donkey, I have come to ask your advice. Old Fox is carrying off our hens and geese. Something must be done to stop him, or soon there will be none left."</span></p>
+    <p class="pnext"><span>"Quite so; quite so. I see; I see, Mr. Gander," said the donkey. "You have come to the right place for advice. Now go back to your friends and tell them to have no fear; I will take the matter in hand."</span></p>
+    <p class="pnext"><span>"But what are you going to do?" asked the gander.</span></p>
+    <p class="pnext"><span>"Why, my dear sir, I am going to bray at Old Fox when he comes. I am going to bray at him, and you will see he will not stay long when he hears my commanding voice."</span></p>
+    <p class="pnext"><span>"Oh, how can I ever thank you?" said the gander, walking away. "I will tell my friends at once that you will take care of them to-night."</span></p>
+    <p class="pnext"><span>"Foolish old donkey," said the gander to himself. "I guess Old Fox has heard a donkey bray before this. I'll try the cow next.</span></p>
+    <p class="pnext"><span>"Madam Cow, Old Fox is carrying off all the fowls, one by one, and if something is not done at once to stop him, there will be none of us left. What would you advise?"</span></p>
+    <p class="pnext"><span>"Oh, don't ask me, Mr. Gander," said the cow. "All I can do is to moo, and Old Fox would no more mind that than the wind blowing. I wish I were wise enough to advise you, but I am not. But if I can help you in any way let me know."</span></p>
+    <p class="pnext"><span>"Thank you, Madam Cow," said the gander, waddling away. "You may hear from me. We never can tell when we shall need the help of our friends."</span></p>
+    <p class="pnext"><span>The next one the gander visited was the cat.</span></p>
+    <p class="pnext"><span>"Can you help me, Madam Puss?" began the gander. "We fowls are all in trouble; Old Fox carries off one or more of our number every night, and something must be done to stop it at once."</span></p>
+    <p class="pnext"><span>The cat opened her mouth very wide and yawned, and the gander wondered if he had been wise, after all, in asking her for advice in this matter.</span></p>
+    <p class="pnext"><span>But Puss closed her mouth with a snap and sat up.</span></p>
+    <p class="pnext"><span>"Of course I can help you," she said. "Did you ever see my claws?"</span></p>
+    <p class="pnext"><span>The gander backed away as Puss held them up to his view.</span></p>
+    <p class="pnext"><span>The gander confessed that he had not and Puss went on: "Well, leave it to me to protect the barnyard; that dog Rover never seems to think about anything but eating and sleeping. I will yowl and spit at Old Fox when he comes to-night, and I can tell you and your friends he will not come again."</span></p>
+    <p class="pnext"><span>"Thank you, thank you, Madam Puss," said the gander, running away.</span></p>
+    <p class="pnext"><span>"My, but that was a narrow escape for me!" said the gander. "She positively looks awful when she opens her mouth. I seem to be getting advice, but not the kind that will save my friends; they all feel sure they can scare Old Fox, but not one of them will be able to; I don't know that all of them together would--"</span></p>
+    <p class="pnext"><span>The gander stopped still and held up his head. "I have it," he said, "I have the very plan; I will get them all together and each shall do his part. I believe we can scare Old Fox away for good and all time."</span></p>
+    <p class="pnext"><span>The gander went to the dog and he promised to bark. "Of course, there is no need of having the others around if I do that," said the dog. "But bring them along if you like; every little helps."</span></p>
+    <p class="pnext"><span>That night the donkey, the dog, the cat, the cow, and the pig were gathered in the barnyard; each one protested that the others were not needed, all but the cow; she was modest, and said she would help. Then the rooster came and offered to crow and the geese were to quack.</span></p>
+    <p class="pnext"><span>"Now you all must hide," said the gander, "and don't move until Old Fox gets right in the middle of the yard; then jump up and do your worst."</span></p>
+    <p class="pnext"><span>Old Fox waited until it was very late, and then crept over the hill and up to the farm. He listened, and, hearing no sound, he crept into the barnyard. He was just about to reach a fat goose when all the animals began. The dog barked, the pig squealed, the donkey brayed, the cow mooed, the geese quacked, the rooster crowed, and Puss, true to her word, yowled and sprang at Old Fox, who was so frightened at the terrible noise he forgot to run until Puss struck at him with her sharp claws; then he took to his swiftest speed, and away he went over the hill and far away, and was never again seen near that farm.</span></p>
+    <p class="pnext"><span>He told some of his friends that a most horrible animal lived there and must have eaten all the hens and geese and was big enough to eat them, for he saw at least twenty feet and claws and heads of all sizes.</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-266">
+      <span id="headpiece-to-dinah-cat-and-the-witch"></span><span id="dinah-cat-and-the-witch"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Dinah Cat and the Witch" src="images/img-094.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Dinah Cat and the Witch</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">DINAH CAT AND THE WITCH</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Once upon a time there was a little girl named Betty. She was an orphan, and a bad landlord turned her out of her home. The only friend she had was a black cat named Dinah. Betty was crying as she walked along the road, and Dinah Cat ran beside her, rubbing against her feet. All at once she ran in front of Betty and stood on her hind legs. "Do not cry, mistress," she said. "I'll take care of you."</span></p>
+    <p class="pnext"><span>Betty was so surprised to hear Dinah Cat speak that she stopped crying at once. "You poor Dinah Cat," she said, "what can you do? We must go to the city, and if I can find work we shall be able to live; if not, you must take care of yourself, for you can catch mice and keep from starving."</span></p>
+    <p class="pnext"><span>"You come with me, mistress," answered Dinah Cat, "and you will not need to work and you will not starve." And she put out her paw for Betty to take and walked alongside her. When they came to a path leading into the wood Dinah Cat led Betty along this path until they were in front of two very large trees which had grown together, but there was a big opening in the trunk. "We'll go in here," said Dinah Cat, and as they stepped through they were in a hall. She led Betty up the stairs to a room where there was a snowy-white bed and pretty furnishings. "Dinner will be served as soon as you are dressed, mistress," said Dinah Cat.</span></p>
+    <p class="pnext"><span>After she had gone Betty looked around, and in the closets she found pretty dresses which just fitted her. She put on one of them, and in a few minutes she was ready for dinner. Just then she heard a soft, scratching noise at the door, and when she opened it Dinah Cat walked in.</span></p>
+    <p class="pnext"><span>"How do you like your new home, mistress?" she asked.</span></p>
+    <p class="pnext"><span>"Very much," Betty answered. "But we cannot live in such a nice house. We have no money, and, besides that, this house must belong to some one. And this dress I have on must belong to some little girl. I should not wear it."</span></p>
+    <p class="pnext"><span>"The dress did belong to a little girl," said Dinah Cat, "but she cannot wear it now, and she wants you to have it. And do not fret about the house. It belongs to me. I cannot tell you any more just now, but you need not worry any more about anything, for you are to live here, if you wish, after you have dinner, for then you will meet a boy, and you may not like him."</span></p>
+    <p class="pnext"><span>Dinah Cat led Betty into a room where the table was set for three persons, and when they were seated a boy about Betty's age came in and sat with them. He wore his hat, and a thick veil hung from it.</span></p>
+    <p class="pnext"><span>"I am sorry I cannot remove my hat," he said, in a very sweet voice, "and I will go away if you'd rather I would."</span></p>
+    <p class="pnext"><span>"Oh no," said Betty, feeling very much like an intruder. "I am very grateful to you for letting me stay, and I will help to do the work."</span></p>
+    <p class="pnext"><span>"You do not need to work," said the boy. "If you will stay we will be very glad."</span></p>
+    <p class="pnext"><span>Betty did not once get a glimpse of his face, he lifted the veil so carefully. And there sat Dinah Cat, using her knife and fork like any lady. Betty smiled to herself when she thought of her eating from a saucer.</span></p>
+    <p class="pnext"><span>Suddenly Dinah Cat slid out of her chair and crawled under it, and the little boy trembled so that his chair shook. Betty looked around to find the cause of their strange behavior, and saw standing in the doorway an old woman with a staff in her hand. She hobbled over to where Dinah Cat sat and raised the staff. Betty thought she was going to strike her.</span></p>
+    <p class="pnext"><span>"Don't you hurt Dinah Cat!" she cried, running toward the old witch, who was so startled that she dropped the staff, and Betty picked it up.</span></p>
+    <p class="pnext"><span>"Don't let her have it again," said the boy; "that is the cause of all our trouble."</span></p>
+    <p class="pnext"><span>Betty threw the staff in a closet and locked the door. All this time the witch was stepping backward toward the door by which she entered, and she grew smaller with each step. By the time she was out of the house she looked like a black speck, and a breeze blowing just then carried her out of sight. "But how shall we ever be ourselves again?" said the boy. "She has gone, and here we are, in this state."</span></p>
+    <p class="pnext"><span>"Perhaps the stick will do it," said Dinah Cat.</span></p>
+    <p class="pnext"><span>Betty wondered what they meant, and the boy told her that Dinah Cat was his sister before the witch changed her into a cat, and made his face so hideous that he had to wear a veil, and they had lived very happily together. "But one day the old witch came and wanted to live with us, and we let her for a while, but she was so cross and made us so unhappy we told her she must go away. Then she brought all this change upon us, and every once in a while she returns and frightens us, for we do not know what she will change us into next."</span></p>
+    <p class="pnext"><span>"Let me get the stick," said Betty. "Perhaps we can change Dinah Cat to your sister again."</span></p>
+    <p class="pnext"><span>Betty opened the door of the closet, and instead of the stick there was a bright streak of light, and walking on it was a little Fairy who held a wand in her hand.</span></p>
+    <p class="pnext"><span>"You will soon be happy again," she told them. "I have destroyed the stick and the old witch will never return."</span></p>
+    <p class="pnext"><span>Then she walked over to Dinah Cat and touched her with her wand and there stood a little girl about Betty's age in place of the black cat.</span></p>
+    <p class="pnext"><span>"Now close your eyes," said the Fairy, "for I want the boy to remove his veil, and his face is not pleasant to look upon."</span></p>
+    <p class="pnext"><span>Betty did as the Fairy told her, but I am sorry to tell you that she peeked a very little. Betty closed her eyes tight after the first glimpse and waited for the Fairy to tell her to open them again, and when she did there stood the boy with a very smiling face. His sister ran to him and put her arms around him. "Now we shall be happy," she said, "and Betty will live with us. How can we thank you?" she asked the Fairy.</span></p>
+    <p class="pnext"><span>"Oh, I shall be repaid by seeing you all happy," the Fairy replied. "And now I must go."</span></p>
+    <p class="pnext"><span>"Will we see you again?" asked Betty.</span></p>
+    <p class="pnext"><span>"No," answered the Fairy. "I only appear when people are in trouble, and you will never need me again."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 74%" id="figure-267">
+      <span id="headpiece-to-the-star-and-the-lily"></span><span id="the-star-and-the-lily"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Star and the Lily" src="images/img-099.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Star and the Lily</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE STAR AND THE LILY</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Once there bloomed in a garden a beautiful white lily, on a long stalk so tall that she towered over all the flowers that bloomed near her.</span></p>
+    <p class="pnext"><span>Of course, the sunflowers at the back of the garden were much taller and the hollyhocks that grew in front of the sunflowers were taller, too, and also the sweet peas. But they were not near the beautiful lily. Beside her bloomed pansies and poppies, and many other beautiful flowers, but they were not so tall as the lily.</span></p>
+    <p class="pnext"><span>A rose-bush growing near the lily noticed that she drooped and did not look as happy as usual one morning, and she asked what had happened.</span></p>
+    <p class="pnext"><span>"Oh, I am thinking of some one I love," answered the lily, with a sigh.</span></p>
+    <p class="pnext"><span>"That should not bring a sigh or make you look sad, my fair friend," said the rose. "Love should make you happier than anything else in the world."</span></p>
+    <p class="pnext"><span>"Yes, I suppose it should," answered the lily, "but my love is so far away I am not sure that I am loved in return."</span></p>
+    <p class="pnext"><span>"Oh, immodest lily!" said the rose. "I thought you the most modest of all of us, and here you are in love with some one you do not know. Tell me about it, do?" said the rose, alert with interest.</span></p>
+    <p class="pnext"><span>"I will tell you, dear rose," said the lily, "and perhaps you can tell me how to win the love of my beloved, or how I can overcome my great love for him."</span></p>
+    <p class="pnext"><span>"I will do anything I can for you, my dear," said the rose, "but do tell me quick all about your love-story."</span></p>
+    <p class="pnext"><span>"One night," began the lily, "when everything was quiet in the garden and all the other flowers were fast asleep, I happened to raise my head and open my petals. The moonlight was streaming over the garden, and I looked around at all the sleeping flowers and wondered how I happened to awake at that hour, when, looking up to see the moon in all her splendor, I beheld a beautiful star looking down at me.</span></p>
+    <p class="pnext"><span>"At first I thought it was looking at the whole garden, but then I knew all the others were asleep and I must be the one it was smiling at, for it twinkled and brightened as I gazed at it.</span></p>
+    <p class="pnext"><span>"I lowered my head and slyly looked again, and still the star was looking, and every time it saw me raise my head it would twinkle a smile at me. The next night I wanted to make sure it was I that the star really smiled at, and when it was bedtime I only bowed my head and did not sleep.</span></p>
+    <p class="pnext"><span>"Then when the garden was still and I was sure you all slept I again raised my head and saw my star smiling straight down at me.</span></p>
+    <p class="pnext"><span>"This time I was sure I was the only one that the star could be smiling at, and I raised my head and opened my petals and let all the perfume of my heart go up to him, and I did not feel that I was bold, for we were all alone and he smiled down upon me, his love for two nights.</span></p>
+    <p class="pnext"><span>"But now I am sorrowful, for it is day and I cannot see my beloved. He seems only to show his love for me at night. What shall I do, dear rose? I am not strong enough to stay awake all day and all night too. Soon I will die if I do, and yet I cannot live if I do not see my star each night. That is why I sigh and look so sad, for I might sleep all night some time and my star will think I do not love him."</span></p>
+    <p class="pnext"><span>The rose shook her head. "I cannot advise you, my friend," she said; "you are in love with some one far above you, and are not even sure you are loved in return. Be wise and sleep through the night as the rest of us do, and give up this uncertain lover."</span></p>
+    <p class="pnext"><span>But the lily only drooped her head and sighed, and that night looked for her lover again, but the sky was dark and no bright smile greeted the poor lily. All night she gazed into the dark sky, and when the first light of day came she was still looking for her lover.</span></p>
+    <p class="pnext"><span>The rose looked at her when the sun came upon them that morning, but the lily did not raise her head; she was too full of sorrow to lift her face to the sun, and by and by the rose saw that she was drooping lower and lower, so she spoke to her.</span></p>
+    <p class="pnext"><span>"Lily," she said, leaning closer to her, "raise your head and let the sun cheer you. You will die if you do not open your petals and get the light and air."</span></p>
+    <p class="pnext"><span>But the poor lily was past caring for sun or air; her petals were limp and her stalk withered.</span></p>
+    <p class="pnext"><span>The rose leaned closer to her as she faintly answered, and this is what she heard:</span></p>
+    <p class="pnext"><span>"Good-by, my friend; I shall bloom no more. My bright star hid his face from me last night and I have no desire to live longer. Perhaps I may see him after I am gone from here, and if that is true I shall be happy, but I cannot live here and not see his face.'"</span></p>
+    <p class="pnext"><span>The wind blew through the garden just then and took the lily from her stem, scattering her petals far out of the garden.</span></p>
+    <p class="pnext"><span>"Poor lily!" murmured the rose, "she went the way we all will go, but her heart was broken and she died before her time. If she had only looked for love here in the garden instead of looking so far above her she might be blooming now, poor lily."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 72%" id="figure-268">
+      <span id="headpiece-to-lazy-gray"></span><span id="lazy-gray"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to Lazy Gray" src="images/img-103.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Lazy Gray</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">LAZY GRAY</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>All the other squirrels called him Lazy Gray, which was really not a very nice name for a squirrel to have, but it fitted this squirrel, and I am going to tell you how he came to be called by such an unpleasant name.</span></p>
+    <p class="pnext"><span>When Lazy Gray was born there were three little squirrels in his family, but he was the youngest and his mother thought he was the prettiest, and all the rest of the family used to wait on him a great deal, and his mother did not ask him to do errands or to climb trees or any other of the hard tasks that most squirrels have to do. And Lazy Gray took advantage of the kindness of his mother and his brothers and sister, and used to ask them to wait on him. When he was thirsty and wanted a drink of water he would call to his mother and say, "I am thirsty"; and she would take a nutshell and go down to the brook and fill it with nice cool water and bring it to him for him to drink. And sometimes he wouldn't even say "Thank you" when he had finished.</span></p>
+    <p class="pnext"><span>And he used to make his brothers go on long journeys through the woods to get a particular kind of nut of which he was very fond; and if they happened to bring him one that was not good he would find fault with them and tell them that they did not know good nuts from bad ones.</span></p>
+    <p class="pnext"><span>All through the summer he fooled away his time sleeping and lying in the sun and never a single nut did he gather for himself. But when fall came and his two brothers were taken ill, his mother said that he would have to help her gather nuts because she could not gather enough to last the whole family through all the long winter. Lazy thought it was very hard that he should be called upon to work for his brothers even if they were sick, and he complained very bitterly about how hard it was for him to climb trees all day and store nuts. Whenever he could he stole away and lay down behind a rock and kept hidden until his mother came and found him. And then she would tell how, when it got cold and there was snow all over the ground and he was hungry, he would wish that he had been a good squirrel and had gathered the nuts while he could.</span></p>
+    <p class="pnext"><span>But he did not believe her and said, "Oh, I have gathered all the nuts I shall want and am not going to work any more," and then he would go to sleep again.</span></p>
+    <p class="pnext"><span>Weeks passed by, and it grew colder and colder and the snow came, and all the squirrels began to draw on their stores of nuts. Lazy found that he got pretty hungry sometimes and that the habit of eating and drinking all he wanted in the summer made him want to eat and drink all he wanted in the winter. And as he had never taught himself self-denial, he ate all he wanted, and very early in the winter he began to see that the nuts he had gathered would not last him half-way through the winter, and almost before he knew it his whole store was exhausted and he had nothing to eat.</span></p>
+    <p class="pnext"><span>Then he asked his mother to let him have some of the nuts that she had gathered, and being a kind mother, she let him have just as many as she could, but she still had to keep some for his sick brothers. When she would not give him all he thought he ought to have he decided that he would go over to a neighboring tree and ask a squirrel over there for some of his nuts, and for weeks he went from one tree to another begging nuts, until every squirrel in the woods hated to see him coming, for they knew he was going to beg food that he should have gathered for himself.</span></p>
+    <p class="pnext"><span>At last he became so much of a nuisance that all the squirrels in the wood held a meeting and decided that each one of them would give two nuts to "Lazy," as they now all called him, and that he would have to live for the rest of the winter on the store they contributed or else starve.</span></p>
+    <p class="pnext"><span>When Lazy saw what a small store of nuts he would have to live upon until spring he was frightened, for he had eaten almost as many nuts as there were there in a week.</span></p>
+    <p class="pnext"><span>But he knew he had to make them last, so he ate very sparingly, and his sides began to be less plump and his cheeks less full, and by springtime he was a pretty sorry-looking squirrel, with his ribs showing plainly through his sides and his bushy tail looking bigger than the whole of the rest of him.</span></p>
+    <p class="pnext"><span>But it taught him a good lesson, and early in the next summer, just as soon as there were any nuts to be had, he began to store them away, and when winter came again he had a big hole in the tree filled full and his mother was much pleased.</span></p>
+    <p class="pnext"><span>"You see," she told him, "how wicked it is not to provide for the future and store up things that are necessary against the time when you will need them."</span></p>
+    <p class="pnext"><span>And Lazy agreed with her and told her that never again so long as he lived would he merit the name of "Lazy."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 71%" id="figure-269">
+      <span id="headpiece-to-the-old-gray-hen"></span><span id="the-old-gray-hen"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Old Gray Hen" src="images/img-107.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Old Gray Hen</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE OLD GRAY HEN</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>"Oh, dear!" said the Old Gray Hen, "what a life this is! Up in the morning at the break of day in answer to the summons of that crowing rooster; scratch all the forenoon for worms; sit on a nest and leave a beautiful egg there, and in half an hour along comes somebody and takes the egg and I never see it again. Then every spring I am put on a lot of eggs that I never saw before and am supposed to sit there until a brood of chickens are hatched out, and then for weeks I have to scratch for them as well as for myself. I don't see anything in this sort of life, and I propose to change it until it is more to my liking and more as the life of such a fine hen as I am ought to be."</span></p>
+    <p class="pnext"><span>Old Daddy Gander happened along just as the Gray Hen finished talking to herself. "What's the trouble this morning?" he asked. "Why all this sputtering and spluttering? One would think that the whole barnyard had turned upside down and the corn had all fallen off into the sky."</span></p>
+    <p class="pnext"><span>"There's matter enough," said Gray Hen. "What have we fowls to live for? I scratch and you waddle and you waddle and I scratch, and what does it all amount to? Something has got to be done, and, if no one else will do it, why, I shall. Things are going to be different with me."</span></p>
+    <p class="pnext"><span>"I guess I'll keep on as I am," said old Daddy Gander as he waddled away. "I might make them worse than they are, and they are not so bad, anyway."</span></p>
+    <p class="pnext"><span>"Good morning, Gray Hen," said Madam Duck. "What a fine day we are going to have! The water will be nice and warm for my ducklings, and I can give them a good swim in the pond."</span></p>
+    <p class="pnext"><span>"It is neither a good morning nor is it going to be a fine day, and as for swimming in the pond, if I had to mother a lot of children with as homely feet as your brood has I would want to keep them in the water all the time so that no one would see them."</span></p>
+    <p class="pnext"><span>"What a mean disposition Gray Hen has!" said Madam Duck to the turkey gobbler as she went on her way to the pond. "I tried to be agreeable to her and she insulted me and spoke so unkindly of my children that I felt quite like crying."</span></p>
+    <p class="pnext"><span>"I almost wish that she had been a little more unkind," said the gobbler, "for I have never seen a duck crying and I imagine it might be an almost sight. Perhaps Gray Hen needs some of my good advice, and I will walk over shortly and see her."</span></p>
+    <p class="pnext"><span>But the old gobbler was saved his trouble, for in a few minutes he saw Gray Hen coming down the path toward him. As she came up to him he said: "What a miserable feeling morning this, Mrs. Hen; my feathers will none of them lie straight, and every worm that I have tasted for breakfast has been bitter."</span></p>
+    <p class="pnext"><span>"You are quite right," said Gray Hen. "It is just like all the mornings recently, uncomfortable and disagreeable, and there does not seem to be any promise of anything better."</span></p>
+    <p class="pnext"><span>"You are quite right," said the gobbler. "What the gander and the duck see in the present to be so satisfied with I don't understand, and as to the future, I don't know why we should expect any more of that than the past."</span></p>
+    <p class="pnext"><span>"I have always felt," said Gray Hen, "that you, Mr. Gobbler, never got half your deserts in this barnyard. Everybody seems to think that the rooster, because he crows every morning at sunup, is the wisest bird in the yard, but as for me, I have always held you in greater esteem and have often spoken of the nobility of your looks and the regal way in which you walk about the place. If I had any voice in the matter I should suggest that you be recognized as superior to the rooster. But, you see, the hens have nothing to say, although some day I feel sure that it will be different."</span></p>
+    <p class="pnext"><span>"You are very kind," said the gobbler, "and I feel as you do, while I have no wish to be ruler of the yard, that the hens should have more to say. You should at least have independence and do as you like."</span></p>
+    <p class="pnext"><span>"Oh, I have determined on that already," said Gray Hen, and she told him how she had decided to lay no more eggs and to scratch as little as she had to.</span></p>
+    <p class="pnext"><span>"Well," said the gobbler, "I must be off and see that none of those turkey hens get so far into the wood that they cannot find their way back again. I certainly gave the kind of advice she wanted," he said, when he had got out of her hearing, "and that was easier than getting into an argument. And, besides that, discontented people and animals are always so much more comfortable if they think others are just as unhappy as they are."</span></p>
+    <p class="pnext"><span>Old Gray Hen, however, was as good as her word. She stopped laying eggs and the amount of gravel that she scratched was scarcely worth mentioning. She stole worms from the younger chickens, who were too polite to punish a hen so old as she was, and, altogether, she became a general nuisance to all the rest of the barnyard flock.</span></p>
+    <p class="pnext"><span>They could not protect themselves, but Farmer Johnson, walking through the yard one day, noticed that the Old Gray Hen's toes had grown to a most unusual length. "I guess she doesn't do much scratching," he said as he passed along, "and I suspect she doesn't lay many eggs. I must ask mother about it when I get back to the house."</span></p>
+    <p class="pnext"><span>"No," said Mother Johnson, when he asked her, "I haven't found an egg in Gray Hen's nest for a month or more."</span></p>
+    <p class="pnext"><span>"She won't pay to winter, then," said Farmer Johnson. "We had better eat her." And the following Sunday, when Farmer Johnson sat down for dinner, they brought a big platter of steaming fricassee to the table and that was the end of Old Gray Hen.</span></p>
+    <p class="pnext"><span>A day or two after, when the gobbler happened to meet Madam Duck, she said: "I hear that Gray Hen has left us."</span></p>
+    <p class="pnext"><span>"Yes," said the gobbler, "and I hope she is happier than she was here, but her contentment was greatest when others were distressed."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 73%" id="figure-270">
+      <span id="headpiece-to-the-worsted-doll"></span><span id="the-worsted-doll"></span><img class="align-center block" style="display: block; width: 100%" alt="headpiece to The Worsted Doll" src="images/img-112.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to The Worsted Doll</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">THE WORSTED DOLL</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Good Mother Munster and her husband Jacob had five daughters. Of course they loved them dearly, but they often wished for a son.</span></p>
+    <p class="pnext"><span>"Then he could help me in the shop," said Jacob, who was a maker of dolls. "Not that I would exchange one of our girls for a boy," he added, "but I wish we had a son as well as the five girls."</span></p>
+    <p class="pnext"><span>Whether the stork heard this talk between Jacob and his wife and took offense because they questioned his judgment, or whether he thought Jacob and his wife had their number of children, I do not know; but he never called again at their door and their daughters grew up to womanhood without a brother.</span></p>
+    <p class="pnext"><span>One day Jacob hurried in from his shop, which was back of his house. He was very much excited, and talked so fast that good Mother Munster could not understand half he said.</span></p>
+    <p class="pnext"><span>"They want worsted dolls," he explained at last, "two dozen worsted dolls to be sent across the water in time for Christmas."</span></p>
+    <p class="pnext"><span>Jacob raised his hands with a gesture of despair, for at his shop they did not make worsted dolls, and he could not understand why any one should want them.</span></p>
+    <p class="pnext"><span>"There is plenty of time to make them," Mother Munster said. "The girls and I can knit them, and we will make half of them girls and half of them boy dolls." And so the knitted dolls were begun by good Mother Munster and her daughters.</span></p>
+    <p class="pnext"><span>One day when Mother Munster was knitting on the last doll, which was a boy, she began to think how much she would miss them when they were finished and sent across the sea.</span></p>
+    <p class="pnext"><span>"I will make you extra large," she said as she added a few stitches to the length and breadth of the doll, "and if I could I would knit you a tongue so you could talk and legs that you could run on, and have you like a live boy."</span></p>
+    <p class="pnext"><span>Mother Munster knitted as she thought, and though she did not know it, she knitted all her wishes into the boy doll's body, so that when he was finished he could do all the things she had wished.</span></p>
+    <p class="pnext"><span>But he was a wise little fellow, and did not betray himself for fear he would not be shipped across the water with the other dolls, and he wanted to see the world.</span></p>
+    <p class="pnext"><span>It was a long journey to the other side of the ocean, and the boy doll thought it never would end. But by and by he was taken from the big packing-case and with other dolls placed in a window of a big shop.</span></p>
+    <p class="pnext"><span>"I wish some one would speak to me," thought the boy doll, but not a word did the other dolls utter, and as he did not wish to appear forward he kept silent also.</span></p>
+    <p class="pnext"><span>One day a lady came into the store and carried Boy Doll away with her, and then one night he was put on a tree trimmed with glittering ropes of tinsel.</span></p>
+    <p class="pnext"><span>A little girl came into the room after a while, and when she saw Boy Doll she exclaimed, "Oh, I hope the boy doll is for me!"</span></p>
+    <p class="pnext"><span>"So do I," thought Boy Doll, "for I am sure you will talk to me."</span></p>
+    <p class="pnext"><span>And sure enough he was given to the little girl. "I am so glad you were for me," she told him, "for I do need a father for my doll family."</span></p>
+    <p class="pnext"><span>"Dear me," thought Boy Doll, "what a responsibility to be forced upon me so suddenly!" And not a word could he speak in reply to the little girl, because he was so surprised.</span></p>
+    <p class="pnext"><span>The little girl took him into a large room, which was the home of her doll family.</span></p>
+    <p class="pnext"><span>"This is your husband, Rosamond," she said to a large French doll, "and his name is Theodore. And this is your father," she told a group of small dolls; "he has come to live with you.</span></p>
+    <p class="pnext"><span>"I hope you will be a good father to them," she said to Theodore. But Boy Doll was so overcome that his tongue clung to the roof of his mouth and he was silent.</span></p>
+    <p class="pnext"><span>Theodore, as we may call him now, was placed in a large arm-chair, and the little girl left him with his family.</span></p>
+    <p class="pnext"><span>His grand-looking wife held her head very high and cast a look of disdain at poor Theodore, for she was not pleased to have a worsted doll for a husband, and the children, following the example of their mother, looked at their new father and giggled.</span></p>
+    <p class="pnext"><span>"Oh, why did I leave good Mother Munster?" thought Theodore. "She wanted a son and she would have loved me."</span></p>
+    <p class="pnext"><span>He sat very still for a while. He was thinking what he should do; he knew that as the father of a family he should be respected, and here were his children laughing at him.</span></p>
+    <p class="pnext"><span>If it were not for the haughty French wife he might exert his authority, but Theodore was a little afraid of her.</span></p>
+    <p class="pnext"><span>"I'll begin with the children," he said at last, "and that may impress Rosamond."</span></p>
+    <p class="pnext"><span>So while the children were giggling and whispering Theodore suddenly jumped up from his chair.</span></p>
+    <p class="pnext"><span>Of course he was very stiff in his movements, as he did not have any joints, and the children laughed out and said, "Our father hasn't any joints in his legs."</span></p>
+    <p class="pnext"><span>The stern look on Theodore's face soon quieted them, however, and by the time he reached them they were quite afraid. Theodore cleared his throat and put his hands behind him.</span></p>
+    <p class="pnext"><span>"It is very evident," he said, "that you need a father, for your manners are shockingly bad. What is your name?" he asked, taking one of them by the shoulder.</span></p>
+    <p class="pnext"><span>"Etta," she answered.</span></p>
+    <p class="pnext"><span>"And yours?" he said, pointing to another.</span></p>
+    <p class="pnext"><span>"May," was the reply.</span></p>
+    <p class="pnext"><span>"And yours, and yours, and yours, and yours, and yours, and yours?" he asked, receiving in turn the names of Sally, Freda, Maude, Cora, Dora, and Ida.</span></p>
+    <p class="pnext"><span>"I shall divide you into two groups of four each," he said, after hearing the names. "One will be the Etta-May-Sally-Freda group, and the other will be the Maude-Cora-Dora-Ida group. That will simplify matters for me, and I can talk to four at one time. Ettamaysallyfreda," he called.</span></p>
+    <p class="pnext"><span>"Yes, father," answered all four at once.</span></p>
+    <p class="pnext"><span>"If I ever hear you giggle again as you did when I appeared I shall punish you severely."</span></p>
+    <p class="pnext"><span>"Yes, sir," answered the trembling dolls.</span></p>
+    <p class="pnext"><span>"Maudecoradoraida," said Theodore, in a stern voice.</span></p>
+    <p class="pnext"><span>"Yes, father," answered the second group.</span></p>
+    <p class="pnext"><span>"If you behave again in the manner you did when I first came to this house you will be punished in a way you will remember."</span></p>
+    <p class="pnext"><span>"Yes, sir," answered the four dolls.</span></p>
+    <p class="pnext"><span>Theodore turned away and with all the dignity he could muster walked toward his wife.</span></p>
+    <p class="pnext"><span>Rosamond's head was not held so high now, for her husband's manner with the children had shown her that he intended to be master in his home.</span></p>
+    <p class="pnext"><span>"When do we dine?" he asked.</span></p>
+    <p class="pnext"><span>"We have no regular hour," she answered.</span></p>
+    <p class="pnext"><span>"We will dine at seven," said Theodore; "breakfast at eight; the hour for lunch you may please yourself about, as I shall not be here. The children will not dine with us," he added. "And now I should like to see my room."</span></p>
+    <p class="pnext"><span>Rosamond, who was as completely subdued as the children, very meekly did as she was told, and Theodore found himself master without any further trouble.</span></p>
+    <p class="pnext"><span>But he could not forget good Mother Munster, and while he knew he should be content in the bosom of his family, he found his thoughts often with Mother Munster, across the water.</span></p>
+    <p class="pnext"><span>It was not an easy matter being the father of a family. If he felt like jumping or lying on the floor, there were the children, and he must not lose his dignity for a moment. "I would rather be a son," he said, "than be the father of a family. If I could get back to Germany and good Mother Munster I should be quite happy."</span></p>
+    <p class="pnext"><span>Of course this was not the proper feeling for a husband and father to have, but you must remember that Theodore had all this thrust upon him before he had any of the joys of boyhood.</span></p>
+    <p class="pnext"><span>One day he heard the family where he lived talking about going abroad, and saw the big trunks being packed.</span></p>
+    <p class="pnext"><span>"Oh dear," thought Theodore, "I wonder if they will take me with them. Perhaps they will go to Germany where the good Mother Munster lives."</span></p>
+    <p class="pnext"><span>And then Theodore thought a very wicked thought. "I will get into one of the trunks and hide," he said, "and if I can find the German village where Mother Munster lives I will not come back to be the father of a family, but I will stay with good Mother Munster and be her little boy."</span></p>
+    <p class="pnext"><span>Of course that was deserting his family, but Theodore did not know anything about how wrong that was, and so one day when he was left alone in the room with the trunks he climbed over the side of one of them and hid himself between the folds of a dress, without saying good-by to his wife or children.</span></p>
+    <p class="pnext"><span>Theodore did not feel safe until the men came for the trunks, and then his heart leaped for joy. After a long time the trunks were opened in a hotel, and Theodore wondered what they would say when they found him.</span></p>
+    <p class="pnext"><span>"Here is Theodore," said the mother to her little girl, when she found him inside her dresses. "I wonder how he got in my trunk."</span></p>
+    <p class="pnext"><span>The little girl had not brought any of her dolls and she was so pleased to see Theodore that she hugged him.</span></p>
+    <p class="pnext"><span>Theodore felt guilty when he thought of what he intended to do, but his love for Mother Munster was deeper than that for his family.</span></p>
+    <p class="pnext"><span>After many weeks of visiting different places, Theodore had almost given up hope of seeing Mother Munster again, when one day he heard them say, "We will go to Berlin to-morrow."</span></p>
+    <p class="pnext"><span>"Berlin, Berlin," repeated Theodore. "Where have I heard that name before?" Then all at once it came to him that it was in Germany and that not far from there was the village where Mother Munster lived.</span></p>
+    <p class="pnext"><span>He could hardly keep from jumping for joy.</span></p>
+    <p class="pnext"><span>One morning after they had been in Berlin for a week the father of the little girl said, "We are to visit a little village to-day where they make dolls."</span></p>
+    <p class="pnext"><span>"I will take Theodore," said the little girl, "for I want to get a girl doll just like him."</span></p>
+    <p class="pnext"><span>They rode quite a distance on the train, and then in a carriage, and stopped at a house that made Theodore's heart thump so loudly that he feared they would hear it, for the house was the home of good Mother Munster, and there standing in the doorway was the dear old lady herself.</span></p>
+    <p class="pnext"><span>They went into the kitchen and the little girl put Theodore on a chest which stood in the room.</span></p>
+    <p class="pnext"><span>In the excitement of seeing the doll-shop she forgot to take him with her, and as soon as Theodore found himself alone he slipped off the chest and hid behind it.</span></p>
+    <p class="pnext"><span>When the little girl came back from the shop she had a large doll in her arms and she quite forgot Theodore.</span></p>
+    <p class="pnext"><span>A few days after, when Mother Munster was cleaning her kitchen, she moved the chest, and there was Theodore with his arms stretched up toward her.</span></p>
+    <p class="pnext"><span>Mother Munster picked him up. "Why, it is my boy!" she said. "How ever did you get here?" she asked. Then she thought of the little girl. "I hope she does not send for you," she said, and she held Theodore tightly in her arms.</span></p>
+    <p class="pnext"><span>"So do I," said Theodore, and although he did not speak out loud Mother Munster seemed to understand.</span></p>
+    <p class="pnext"><span>"You'd rather live here, hadn't you?" she asked. "I will put you on this seat in the corner and you shall be my little boy. All the girls have gone to homes of their own, and Jacob and I are very lonely.</span></p>
+    <p class="pnext"><span>"Look, Jacob," she said as he came in the door, "here is the worsted doll I made to send across the water. He has come back to live with us, and so at last we have a son."</span></p>
+    <p class="pnext"><span>Jacob smiled. He didn't think much of worsted dolls, but he took Theodore by one hand. "You have traveled a long distance, son," he said, "since you left here, and can tell Mother Munster and me all about what you have seen as we three sit by the fire in the long winter evenings." And so Theodore found a mother and father and lived a happy and peaceful life undisturbed by the cares of a family.</span></p>
+    <p class="pnext"><span>But sometimes he dreams and awakens himself by calling, "Ettamaysallyfreda," or "Maudecoradoraida." And when he makes sure it is only a dream he turns over and goes to sleep again with a smile of contentment on his face which plainly says, "Theodore, you are a lucky man."</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>THE END</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>Books by<br />
+    ABBIE PHILLIPS WALKER</span></p>
+    <div class="vspace" style="height: 1em"></div>
+    <p class="noindent pfirst"><span>Sandman's Christmas Stories<br />
+    The Sandman's Hour<br />
+    Sandman's Twilight Stories<br />
+    Sandman Tales<br />
+    Told by the Sandman<br />
+    Sandman's Rainy Day Stories<br />
+    Sandman's Stories of Drusilla Doll<br />
+    Sandman's Good-Night Stories<br />
+    Sandman's Might-Be-So Stories<br />
+    Sandman's Fairy Stories</span></p>
+    <p class="center pnext"><span>Harper &amp; Brothers<br /></span> <em class="italics">Publishers</em></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
